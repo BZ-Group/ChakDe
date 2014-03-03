@@ -22,6 +22,15 @@
 		E55264CE18C51C8A00721917 /* BugzillaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55264CD18C51C8A00721917 /* BugzillaTests.m */; };
 		E5831C3818C5261900D5272B /* BZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C2A18C5261900D5272B /* BZAppDelegate.m */; };
 		E5831C3918C5261900D5272B /* BZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C2E18C5261900D5272B /* BZViewController.m */; };
+		E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */; };
+		E5831C4118C52B3700D5272B /* BZRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4018C52B3700D5272B /* BZRequestManager.m */; };
+		E5831C4418C52B5500D5272B /* BZServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4318C52B5500D5272B /* BZServiceResult.m */; };
+		E5831C4718C52B6D00D5272B /* BZParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4618C52B6D00D5272B /* BZParseManager.m */; };
+		E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4918C5327D00D5272B /* NSDate+Formatter.m */; };
+		E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4B18C5327D00D5272B /* NSString+Email.m */; };
+		E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5218C5331200D5272B /* BZDeleteThisControl.m */; };
+		E5831C5618C5333A00D5272B /* BZDeleteThisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5518C5333A00D5272B /* BZDeleteThisModel.m */; };
+		E5831C5918C533D200D5272B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5831C5818C533D200D5272B /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,25 @@
 		E5831C2A18C5261900D5272B /* BZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppDelegate.m; sourceTree = "<group>"; };
 		E5831C2D18C5261900D5272B /* BZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZViewController.h; sourceTree = "<group>"; };
 		E5831C2E18C5261900D5272B /* BZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZViewController.m; sourceTree = "<group>"; };
+		E5831C3A18C5288700D5272B /* BZCommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZCommonMacros.h; sourceTree = "<group>"; };
+		E5831C3B18C5288700D5272B /* NSLogSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogSettings.h; sourceTree = "<group>"; };
+		E5831C3C18C52AF600D5272B /* BZWebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZWebServiceClient.h; sourceTree = "<group>"; };
+		E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebServiceClient.m; sourceTree = "<group>"; };
+		E5831C3F18C52B3700D5272B /* BZRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZRequestManager.h; sourceTree = "<group>"; };
+		E5831C4018C52B3700D5272B /* BZRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZRequestManager.m; sourceTree = "<group>"; };
+		E5831C4218C52B5500D5272B /* BZServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZServiceResult.h; sourceTree = "<group>"; };
+		E5831C4318C52B5500D5272B /* BZServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZServiceResult.m; sourceTree = "<group>"; };
+		E5831C4518C52B6D00D5272B /* BZParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZParseManager.h; sourceTree = "<group>"; };
+		E5831C4618C52B6D00D5272B /* BZParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZParseManager.m; sourceTree = "<group>"; };
+		E5831C4818C5327D00D5272B /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		E5831C4918C5327D00D5272B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		E5831C4A18C5327D00D5272B /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
+		E5831C4B18C5327D00D5272B /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
+		E5831C5118C5331200D5272B /* BZDeleteThisControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDeleteThisControl.h; sourceTree = "<group>"; };
+		E5831C5218C5331200D5272B /* BZDeleteThisControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDeleteThisControl.m; sourceTree = "<group>"; };
+		E5831C5418C5333A00D5272B /* BZDeleteThisModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDeleteThisModel.h; sourceTree = "<group>"; };
+		E5831C5518C5333A00D5272B /* BZDeleteThisModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDeleteThisModel.m; sourceTree = "<group>"; };
+		E5831C5818C533D200D5272B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +204,8 @@
 		E5831C2B18C5261900D5272B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C3A18C5288700D5272B /* BZCommonMacros.h */,
+				E5831C3B18C5288700D5272B /* NSLogSettings.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,6 +222,8 @@
 		E5831C2F18C5261900D5272B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C5118C5331200D5272B /* BZDeleteThisControl.h */,
+				E5831C5218C5331200D5272B /* BZDeleteThisControl.m */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -199,6 +231,10 @@
 		E5831C3018C5261900D5272B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C4818C5327D00D5272B /* NSDate+Formatter.h */,
+				E5831C4918C5327D00D5272B /* NSDate+Formatter.m */,
+				E5831C4A18C5327D00D5272B /* NSString+Email.h */,
+				E5831C4B18C5327D00D5272B /* NSString+Email.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +249,8 @@
 		E5831C3218C5261900D5272B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C5418C5333A00D5272B /* BZDeleteThisModel.h */,
+				E5831C5518C5333A00D5272B /* BZDeleteThisModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +258,8 @@
 		E5831C3318C5261900D5272B /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C4518C52B6D00D5272B /* BZParseManager.h */,
+				E5831C4618C52B6D00D5272B /* BZParseManager.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -227,6 +267,12 @@
 		E5831C3418C5261900D5272B /* WSManager */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C3C18C52AF600D5272B /* BZWebServiceClient.h */,
+				E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */,
+				E5831C3F18C52B3700D5272B /* BZRequestManager.h */,
+				E5831C4018C52B3700D5272B /* BZRequestManager.m */,
+				E5831C4218C52B5500D5272B /* BZServiceResult.h */,
+				E5831C4318C52B5500D5272B /* BZServiceResult.m */,
 			);
 			path = WSManager;
 			sourceTree = "<group>";
@@ -250,8 +296,17 @@
 		E5831C3718C5261900D5272B /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				E5831C5718C533D200D5272B /* Login */,
 			);
 			path = iPhone;
+			sourceTree = "<group>";
+		};
+		E5831C5718C533D200D5272B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5831C5818C533D200D5272B /* bg.png */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +390,7 @@
 			files = (
 				E55264BB18C51C8A00721917 /* Images.xcassets in Resources */,
 				E55264AD18C51C8A00721917 /* InfoPlist.strings in Resources */,
+				E5831C5918C533D200D5272B /* bg.png in Resources */,
 				E55264B618C51C8A00721917 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,8 +443,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5831C5618C5333A00D5272B /* BZDeleteThisModel.m in Sources */,
+				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
 				E5831C3918C5261900D5272B /* BZViewController.m in Sources */,
+				E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */,
+				E5831C4718C52B6D00D5272B /* BZParseManager.m in Sources */,
+				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				E5831C3818C5261900D5272B /* BZAppDelegate.m in Sources */,
+				E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */,
+				E5831C4118C52B3700D5272B /* BZRequestManager.m in Sources */,
+				E5831C4418C52B5500D5272B /* BZServiceResult.m in Sources */,
 				E55264AF18C51C8A00721917 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
