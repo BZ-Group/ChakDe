@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPSessionManager.h"
+#import "AFHTTPRequestOperationManager.h"
 
-@interface BZWebServiceClient : AFHTTPSessionManager
+@interface BZWebServiceClient : AFHTTPRequestOperationManager
 
 + (instancetype)sharedClient;
+
+- (void)invokeMethod:(NSString *)method
+      withParameters:(id)parameters
+             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 
 @end

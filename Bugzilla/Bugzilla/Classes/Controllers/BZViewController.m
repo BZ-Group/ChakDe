@@ -7,6 +7,8 @@
 //
 
 #import "BZViewController.h"
+#import "BZParseManager.h"
+
 
 @interface BZViewController ()
 
@@ -24,6 +26,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)versionClicked:(id)sender
+{
+    BZParseManager *bzParseManager = [BZParseManager sharedInstance];
+    
+    //Begin getBugzillaVersion
+    [bzParseManager getBugzillaVersion:^(BOOL success, NSString *errorMessage, NSInteger errorCode)
+    {
+        if (success)
+        {
+            NSLog(@"Success");
+        }
+        else
+        {
+            NSLog(@"Fail");
+        }
+    }];
 }
 
 @end

@@ -23,12 +23,12 @@
 }
 
 
--(void)method1:(BZParseManagerCompletion)completion
+-(void)getBugzillaVersion:(BZParseManagerCompletion)completion
 {
     BZRequestManager *bzRequestManager = [BZRequestManager sharedInstance];
 
     // begin method1
-    [bzRequestManager method1:^(BZServiceResult *result)
+    [bzRequestManager getBugzillaVersion:^(BZServiceResult *result)
     {
         if (result.success == YES)
         {

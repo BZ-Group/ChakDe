@@ -10,4 +10,6 @@
 
 @interface BZViewController : UIViewController
 
+- (IBAction)versionClicked:(id)sender;
+
 @end

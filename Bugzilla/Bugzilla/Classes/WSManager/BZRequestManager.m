@@ -9,12 +9,11 @@
 #import "BZRequestManager.h"
 #import "BZWebServiceClient.h"
 
-
 @implementation BZRequestManager
 
 #pragma mark - Constants
 // urls
-static NSString * const JBServiceLoginURI               = @"url1";
+static NSString * const BZServiceVersionURI               = @"Bugzilla.version";
 
 
 + (BZRequestManager *)sharedInstance
@@ -29,15 +28,21 @@ static NSString * const JBServiceLoginURI               = @"url1";
 }
 
 
--(void)method1:(BZRequestCompletion)completion
+-(void)getBugzillaVersion:(BZRequestCompletion)completion
 {
     //Create request
+    BZWebServiceClient *client = [BZWebServiceClient sharedClient];
+    [client invokeMethod:BZServiceVersionURI
+          withParameters:nil
+                 success:^(AFHTTPRequestOperation *operation, id responseObject){
+                     NSLog(@"Success");
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     NSLog(@"Fail");
+                 }
+     ];
     
-    //Submit request
-    
-            //Success
-    
-            //Failure
+
 }
 
 @end

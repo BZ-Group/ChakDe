@@ -15,6 +15,6 @@ typedef void (^BZParseManagerCompletion)(BOOL success, NSString *errorMessage, N
 
 +(BZParseManager *)sharedInstance;
 
--(void)method1:(BZParseManagerCompletion)completion;
+-(void)getBugzillaVersion:(BZParseManagerCompletion)completion;
 
 @end

@@ -20,7 +20,7 @@ typedef void (^BZRequestCompletion)(BZServiceResult *result);
 +(BZRequestManager *) sharedInstance;
 
 
--(void)method1:(BZRequestCompletion)completion;
+-(void)getBugzillaVersion:(BZRequestCompletion)completion;
 
 
 @end
