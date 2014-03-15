@@ -67,8 +67,7 @@ static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla
 
 
 - (AFHTTPRequestOperation *)HTTPRequestOperationWithRequest:(NSURLRequest *)urlRequest
-                                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+                                                     result:(void (^)(BZServiceResult *result))completion
 {
     return [super HTTPRequestOperationWithRequest:urlRequest
     success:^(AFHTTPRequestOperation *operation, id responseObject)
@@ -83,9 +82,9 @@ static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla
             
             if (result && result != [NSNull null])
             {
-                if (success)
+                if (completion)
                 {
-                    success(operation, result);
+                    completion([BZServiceResult resultWithResult:result]);
                 }
             }
             else if (error && error != [NSNull null])
@@ -110,17 +109,18 @@ static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla
             message = NSLocalizedStringFromTable(@"Unknown JSON-RPC Response", @"AFJSONRPCClient", nil);
         }
         
-        if (message && failure)
+        if (message && completion)
         {
             NSDictionary *userInfo = @{NSLocalizedDescriptionKey: message};
             NSError *error = [NSError errorWithDomain:AFJSONRPCErrorDomain code:code userInfo:userInfo];
             
-            failure(operation, error);
+            completion([BZServiceResult resultWithError:error]);
         }
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) {
-            failure(operation, error);
+        if (completion)
+        {
+            completion([BZServiceResult resultWithError:error]);
         }
     }];
 }
@@ -128,11 +128,10 @@ static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla
 
 - (void)invokeMethod:(NSString *)method
       withParameters:(id)parameters
-             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+              result:(BZRequestCompletion)completion;
 {
     NSMutableURLRequest *request = [self requestWithMethod:method parameters:parameters requestId:@(1)];
-    AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
+    AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request result:completion];
     [self.operationQueue addOperation:operation];
 
 }

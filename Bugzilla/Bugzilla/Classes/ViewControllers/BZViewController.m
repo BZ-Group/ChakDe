@@ -7,7 +7,7 @@
 //
 
 #import "BZViewController.h"
-#import "BZParseManager.h"
+#import "BZLoginController.h"
 
 
 @interface BZViewController ()
@@ -30,10 +30,10 @@
 
 - (IBAction)versionClicked:(id)sender
 {
-    BZParseManager *bzParseManager = [BZParseManager sharedInstance];
+    BZLoginController *bzLoginController = [BZLoginController sharedInstance];
     
     //Begin getBugzillaVersion
-    [bzParseManager getBugzillaVersion:^(BOOL success, NSString *errorMessage, NSInteger errorCode)
+    [bzLoginController getBugzillaVersion:^(BOOL success, NSInteger errorCode)
     {
         if (success)
         {
