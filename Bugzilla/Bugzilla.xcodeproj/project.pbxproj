@@ -31,6 +31,7 @@
 		E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5218C5331200D5272B /* BZDeleteThisControl.m */; };
 		E5831C5618C5333A00D5272B /* BZDeleteThisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5518C5333A00D5272B /* BZDeleteThisModel.m */; };
 		E5831C5918C533D200D5272B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5831C5818C533D200D5272B /* bg.png */; };
+		F179F30018D1F1DE006C3609 /* BZWebServiceClient+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F179F2FF18D1F1DE006C3609 /* BZWebServiceClient+Utils.m */; };
 		F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1C304FE18CF4CF8001BFC50 /* BZModel.xcdatamodeld */; };
 		F1C3050218CF4D91001BFC50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C3050118CF4D91001BFC50 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,8 @@
 		E5831C5418C5333A00D5272B /* BZDeleteThisModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDeleteThisModel.h; sourceTree = "<group>"; };
 		E5831C5518C5333A00D5272B /* BZDeleteThisModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDeleteThisModel.m; sourceTree = "<group>"; };
 		E5831C5818C533D200D5272B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		F179F2FE18D1F1DE006C3609 /* BZWebServiceClient+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZWebServiceClient+Utils.h"; sourceTree = "<group>"; };
+		F179F2FF18D1F1DE006C3609 /* BZWebServiceClient+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZWebServiceClient+Utils.m"; sourceTree = "<group>"; };
 		F1C304FF18CF4CF8001BFC50 /* BZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BZModel.xcdatamodel; sourceTree = "<group>"; };
 		F1C3050118CF4D91001BFC50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -241,6 +244,8 @@
 				E5831C4918C5327D00D5272B /* NSDate+Formatter.m */,
 				E5831C4A18C5327D00D5272B /* NSString+Email.h */,
 				E5831C4B18C5327D00D5272B /* NSString+Email.m */,
+				F179F2FE18D1F1DE006C3609 /* BZWebServiceClient+Utils.h */,
+				F179F2FF18D1F1DE006C3609 /* BZWebServiceClient+Utils.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
 				E5831C3918C5261900D5272B /* BZViewController.m in Sources */,
 				E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */,
+				F179F30018D1F1DE006C3609 /* BZWebServiceClient+Utils.m in Sources */,
 				E5831C4718C52B6D00D5272B /* BZParseManager.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				E5831C3818C5261900D5272B /* BZAppDelegate.m in Sources */,
@@ -598,6 +604,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bugzilla/Bugzilla-Prefix.pch";
 				INFOPLIST_FILE = "Bugzilla/Bugzilla-Info.plist";
@@ -613,6 +620,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bugzilla/Bugzilla-Prefix.pch";
 				INFOPLIST_FILE = "Bugzilla/Bugzilla-Info.plist";
