@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AFHTTPRequestOperationManager.h"
+#import "BZServiceResult.h"
+
+
+#pragma mark Type Definitions
+typedef void (^BZRequestCompletion)(BZServiceResult *result);
+
 
 @interface BZWebServiceClient : AFHTTPRequestOperationManager
 
@@ -15,8 +21,10 @@
 
 - (void)invokeMethod:(NSString *)method
       withParameters:(id)parameters
-             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
+              result:(BZRequestCompletion)completion;
 
 @end
+
+
+//             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+//             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;

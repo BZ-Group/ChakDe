@@ -15,19 +15,15 @@
 
 @property (nonatomic, readonly) id          result;
 @property (nonatomic, readonly) BOOL        success;
-@property (nonatomic, readonly) NSString    *error;
+@property (nonatomic, readonly) NSString    *errorMessage;
 @property (nonatomic, readonly) NSInteger   errorCode;
-@property (nonatomic, readonly) NSInteger   statusCode;
 
 
 #pragma mark -
 #pragma mark Methods
 
-+ (BZServiceResult *)resultWithError: (NSString *)error
-                           errorCode: (NSInteger)errorCode
-                          statusCode: (NSInteger)statusCode;
++ (BZServiceResult *)resultWithError: (NSError *)error;
 
-+ (BZServiceResult *)resultWithResult: (id)result
-                           statusCode: (NSInteger)statusCode;
++ (BZServiceResult *)resultWithResult: (id)result;
 
 @end

@@ -12,9 +12,8 @@
 
 - (id)initWithSuccess: (BOOL)success
                result: (id)result
-                error: (NSString *)error
-            errorCode: (NSInteger)errorCode
-           statusCode: (NSInteger)statusCode;
+         errorMessage: (NSString *)error
+            errorCode: (NSInteger)errorCode;
 
 @end
 
@@ -22,41 +21,34 @@
 
 @synthesize result = _result;
 @synthesize success = _success;
-@synthesize error = _error;
+@synthesize errorMessage = _errorMessage;
 @synthesize errorCode = _errorCode;
-@synthesize statusCode = _statusCode;
 
 
 #pragma mark -
 #pragma mark Constructors
 
-+ (BZServiceResult *)resultWithError: (NSString *)error
-                           errorCode: (NSInteger)errorCode
-                          statusCode: (NSInteger)statusCode
++ (BZServiceResult *)resultWithError: (NSError *)error
 {
 	return [[BZServiceResult alloc] initWithSuccess: NO
                                              result: nil
-                                              error: error
-                                          errorCode: errorCode
-                                         statusCode: statusCode];
+                                       errorMessage: [error localizedDescription]
+                                          errorCode: [error code]];
 }
 
 
 + (BZServiceResult *)resultWithResult: (id)result
-                           statusCode: (NSInteger)statusCode
 {
 	return [[BZServiceResult alloc] initWithSuccess: YES
                                              result: result
-                                              error: nil
-                                          errorCode: 0
-                                         statusCode: statusCode];
+                                       errorMessage: nil
+                                          errorCode: 0];
 }
 
 - (id)initWithSuccess: (BOOL)success
                result: (id)result
-                error: (NSString *)error
+         errorMessage: (NSString *)errorMessage
             errorCode: (NSInteger)errorCode
-           statusCode: (NSInteger)statusCode
 {
     // abort if base constructor fails
 	if ((self = [super init]) == nil)
@@ -64,11 +56,19 @@
 		return nil;
 	}
     
+    if (!success) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:[NSString stringWithFormat:@"%d",errorCode]
+                                                       message:errorMessage
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles: nil];
+        [alert show];
+    }
+
 	_success = success;
 	_errorCode = errorCode;
-	_statusCode = statusCode;
 	_result = result;
-	_error = error;
+	_errorMessage = errorMessage;
     
     // return initialized instance
 	return self;

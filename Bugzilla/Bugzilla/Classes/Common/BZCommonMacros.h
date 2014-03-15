@@ -34,7 +34,7 @@ static inline BOOL BZIsEmpty(id object)
 {
 	BOOL isEmpty = NO;
 	
-	if (JBIsNull(object) == YES
+	if (BZIsNull(object) == YES
 		|| ([object respondsToSelector: @selector(length)]
 			&& [object length] == 0)
 		|| ([object respondsToSelector: @selector(count)]
