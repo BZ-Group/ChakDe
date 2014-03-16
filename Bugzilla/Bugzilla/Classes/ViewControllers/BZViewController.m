@@ -32,18 +32,68 @@
 {
     BZLoginController *bzLoginController = [BZLoginController sharedInstance];
     
+//    //Begin getBugzillaVersion
+//    [bzLoginController getBugzillaVersion:^(BOOL success, NSInteger errorCode)
+//    {
+//        if (success)
+//        {
+//            NSLog(@"Success");
+//        }
+//        else
+//        {
+//            NSLog(@"Fail");
+//        }
+//    }];
+    
+
+    
+    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
+                                  @"password":@"India@123"};
     //Begin getBugzillaVersion
-    [bzLoginController getBugzillaVersion:^(BOOL success, NSInteger errorCode)
-    {
-        if (success)
-        {
-            NSLog(@"Success");
-        }
-        else
-        {
-            NSLog(@"Fail");
-        }
-    }];
+    [bzLoginController invokeLoginWithDetails:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
+    
+//    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
+//                                  @"password":@"India@123"};
+//    //Begin getBugzillaVersion
+//    [bzLoginController retrieveUserInfo:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
+//     {
+//         if (success)
+//         {
+//             NSLog(@"Success");
+//         }
+//         else
+//         {
+//             NSLog(@"Fail");
+//         }
+//     }];
+}
+- (IBAction)getUserInfo:(id)sender {
+    BZLoginController *bzLoginController = [BZLoginController sharedInstance];
+    
+    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
+                                  @"password":@"India@123"};
+    //Begin getBugzillaVersion
+    [bzLoginController retrieveUserInfo:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
 }
 
 @end

@@ -60,6 +60,10 @@ static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla
     payload[@"method"] = method;
     payload[@"params"] = parameters;
     payload[@"id"] = [requestId description];
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"kBZAccesstoken"]){
+       payload[@"token"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"kBZAccesstoken"];
+    }
+    
     
     return [self.requestSerializer requestWithMethod:@"POST" URLString:BugzillaServerBaseURLString parameters:payload error:nil];
 
