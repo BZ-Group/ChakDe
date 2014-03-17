@@ -3,7 +3,7 @@
 
 #pragma mark Class Definition
 
-@implementation NSString (Email)
+@implementation NSString (Utils)
 
 
 #pragma mark -

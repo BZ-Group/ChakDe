@@ -14,6 +14,14 @@
 #define IS_IPHONE_5 ([[UIScreen mainScreen] bounds ].size.height == HEIGHT_IPHONE_5 )
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
+/*
+ *  breif   :   macro for string constant declaration
+ *  params  :   strName     - name of the constant
+ *          :   strValue    - value of the constant
+ *  author  :   anoop.sharma@ymail.com
+ *  dated   :   16th Mar 2014
+ */
+#define STR_CONST(strName, strValue) extern NSString* const strName
 
 //To check Null object
 static inline BOOL BZIsNull(id object)
@@ -45,3 +53,4 @@ static inline BOOL BZIsEmpty(id object)
 	
 	return isEmpty;
 }
+

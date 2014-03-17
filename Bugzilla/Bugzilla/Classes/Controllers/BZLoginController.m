@@ -12,10 +12,10 @@
 @implementation BZLoginController
 
 #pragma mark - Constants
-// urls
-static NSString * const BZServiceVersionURI               = @"Bugzilla.version";
-static NSString * const BZServiceLoginURI                 = @"User.login";
-static NSString * const BZServiceUserInfoURI              = @"User.get";
+//// urls
+//static NSString * const BZServiceVersionURI               = @"Bugzilla.version";
+//static NSString * const BZServiceLoginURI                 = @"User.login";
+//static NSString * const BZServiceUserInfoURI              = @"User.get";
 
 static BZWebServiceClient *client;
 

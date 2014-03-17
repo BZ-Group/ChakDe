@@ -38,7 +38,6 @@
         user = (BZUser *)[NSEntityDescription insertNewObjectForEntityForName:@"BZUser"
                                                      inManagedObjectContext:managedObjectContext];
         
-
         [user setLogin:userData.login];
         [user setPassword:userData.password];
         [user setRemember:userData.remember];

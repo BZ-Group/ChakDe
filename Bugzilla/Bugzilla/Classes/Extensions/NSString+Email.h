@@ -1,6 +1,6 @@
 #pragma mark Class Interface
 
-@interface NSString (Email)
+@interface NSString (Utils)
 
 
 #pragma mark -

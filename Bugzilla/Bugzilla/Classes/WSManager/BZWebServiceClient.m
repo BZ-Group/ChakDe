@@ -8,9 +8,6 @@
 
 #import "BZWebServiceClient.h"
 
-NSString * const AFJSONRPCErrorDomain = @"com.alamofire.networking.json-rpc";
-
-static NSString * const BugzillaServerBaseURLString = @"https://bugzilla.mozilla.org/jsonrpc.cgi";
 
 @interface BZWebServiceClient ()
 
