@@ -10,7 +10,10 @@
 
 @interface BZUser (Utils)
 
-+(BZUser *) registerUserWithData : (NSDictionary*)userData
++(BZUser *) saveUsersCredentials : (NSDictionary*)userData
           inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext;
+
+
++(BZUser *) getCredentials:(NSManagedObjectContext*) managedObjectContext forUser:(NSString*)userID;
 
 @end

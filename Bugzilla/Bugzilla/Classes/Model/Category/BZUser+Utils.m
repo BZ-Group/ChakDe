@@ -8,25 +8,30 @@
 
 #import "BZUser+Utils.h"
 
+
 @implementation BZUser (Utils)
 
 
-+(BZUser *) registerUserWithData : (NSDictionary*)userData
++(BZUser *) saveUsersCredentials : (NSDictionary*)userData
         inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext{
     
+    if(![userData count]) return nil;
+    
     NSString* userLoginId = [NSString stringWithFormat:@"%@", userData[@"login"]];
+    
     // Get the Already existing data
     BZUser *user = nil;
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"BZUser"];
-    //if(!BZIsEmpty(userLoginId)){
+    if(!BZIsEmpty(userLoginId)){
         request.predicate   = [NSPredicate predicateWithFormat:@"login = %@",userLoginId];
-    //}
+    }
     
     NSError* error = nil;
     NSArray *fetchResults = [[NSArray alloc] init];
     fetchResults = [managedObjectContext executeFetchRequest:request error:&error] ;
     
-    NSLog(@"Error : %@",error );
+    NSLog(@"DB Error : %@",error );
+    
     // Case 1:
     // If Error occurs
     if(!fetchResults || [fetchResults count] > 1){
@@ -52,16 +57,15 @@
     return user;
 }
 
-
 // fetch user data from the Database
-+(BZUser *) fetchedUserResults :(NSManagedObjectContext*) managedObjectContext{
++(BZUser *) getCredentials:(NSManagedObjectContext*) managedObjectContext forUser:(NSString*)userID{
     
     // Get the Already existing data
     BZUser *user = nil;
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"BZUser"];
-//    if(!BZIsEmpty(userLoginId)){
-//        request.predicate       = [NSPredicate predicateWithFormat:@"login = %@",userData.emailID];
-//    }
+    if(!BZIsEmpty(userID)){
+        request.predicate       = [NSPredicate predicateWithFormat:@"login = %@",userID];
+    }
     //request.predicate       = [NSPredicate predicateWithFormat:@"unique = %@",userData.emailID];
     
     NSError* error = nil;

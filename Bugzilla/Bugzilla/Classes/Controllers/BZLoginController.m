@@ -9,6 +9,7 @@
 #import "BZLoginController.h"
 #import "BZWebServiceClient.h"
 #import "BZUser+Utils.h"
+#import "BZUserInfo+Utils.h"
 
 @implementation BZLoginController
 
@@ -19,6 +20,7 @@
 //static NSString * const BZServiceUserInfoURI              = @"User.get";
 
 static BZWebServiceClient *client;
+static BZUser *currentUser;
 
 + (BZLoginController *)sharedInstance
 {
@@ -76,8 +78,7 @@ static BZWebServiceClient *client;
                                   [[NSUserDefaults standardUserDefaults] setValue:result.result[@"token"] forKey:@"kBZAccesstoken"];
                               }
                           }
-                          
-                          [BZUser registerUserWithData :result.result
+                          currentUser = [BZUser saveUsersCredentials :loginParams
                                 inManagedObjectContext :appDelegate.managedObjectContext];
                           // callback
                           completion(result.success, result.errorCode);
@@ -106,8 +107,11 @@ static BZWebServiceClient *client;
                       
                       if (result.success)
                       {
+                          
+                          [BZUserInfo  saveUserDetails:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:currentUser];
                           // callback
                           completion(result.success, result.errorCode);
+
                           
                       }
                       else

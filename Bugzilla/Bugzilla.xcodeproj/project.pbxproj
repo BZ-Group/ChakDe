@@ -34,6 +34,7 @@
 		F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703F418D6ADE20027F848 /* NSManagedObject+Utils.m */; };
 		F147040418D70D870027F848 /* BZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F147040318D70D870027F848 /* BZUserInfo.m */; };
 		F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F147041D18D7FDCA0027F848 /* BZDBManager.m */; };
+		F187445B18DEBFE800798C56 /* BZUserInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */; };
 		F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1C304FE18CF4CF8001BFC50 /* BZModel.xcdatamodeld */; };
 		F1C3050218CF4D91001BFC50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C3050118CF4D91001BFC50 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,8 @@
 		F147040318D70D870027F848 /* BZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUserInfo.m; sourceTree = "<group>"; };
 		F147041C18D7FDCA0027F848 /* BZDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDBManager.h; sourceTree = "<group>"; };
 		F147041D18D7FDCA0027F848 /* BZDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDBManager.m; sourceTree = "<group>"; };
+		F187445918DEBFE800798C56 /* BZUserInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUserInfo+Utils.h"; sourceTree = "<group>"; };
+		F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUserInfo+Utils.m"; sourceTree = "<group>"; };
 		F1C304FF18CF4CF8001BFC50 /* BZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BZModel.xcdatamodel; sourceTree = "<group>"; };
 		F1C3050118CF4D91001BFC50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -342,6 +345,8 @@
 		F14703E818D5B4830027F848 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F187445918DEBFE800798C56 /* BZUserInfo+Utils.h */,
+				F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */,
 				F14703E918D5BB6A0027F848 /* BZUser+Utils.h */,
 				F14703EA18D5BB6A0027F848 /* BZUser+Utils.m */,
 			);
@@ -499,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F187445B18DEBFE800798C56 /* BZUserInfo+Utils.m in Sources */,
 				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
 				E59FBBE818D0E8FD009B354C /* BZAppDelegate.m in Sources */,
 				F147040418D70D870027F848 /* BZUserInfo.m in Sources */,
@@ -639,12 +645,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00851FCEFC5942C5A4B29F37 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bugzilla/Bugzilla-Prefix.pch";
 				INFOPLIST_FILE = "Bugzilla/Bugzilla-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -654,12 +661,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00851FCEFC5942C5A4B29F37 /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bugzilla/Bugzilla-Prefix.pch";
 				INFOPLIST_FILE = "Bugzilla/Bugzilla-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
