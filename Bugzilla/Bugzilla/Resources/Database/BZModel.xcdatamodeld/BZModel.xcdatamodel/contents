@@ -4,8 +4,22 @@
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remember" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUserInfo" inverseName="hasUser" inverseEntity="BZUserInfo" syncable="YES"/>
+    </entity>
+    <entity name="BZUserInfo" representedClassName="BZUserInfo" syncable="YES">
+        <attribute name="can_login" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ids" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="is_new" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="last_activity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="real_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saved_searches" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="hasUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUser" inverseName="userInfo" inverseEntity="BZUser" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="BZUserInfo" positionX="-54" positionY="18" width="128" height="193"/>
     </elements>
 </model>

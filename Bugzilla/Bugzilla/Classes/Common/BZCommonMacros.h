@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 iCoder. All rights reserved.
 //
 
-
+#import "BZAppDelegate.h"
 #pragma mark Helper
 
 #define HEIGHT_IPHONE_5 568
@@ -22,6 +22,7 @@
  *  dated   :   16th Mar 2014
  */
 #define STR_CONST(strName, strValue) extern NSString* const strName
+#define appDelegate ((BZAppDelegate *)[UIApplication sharedApplication].delegate)
 
 //To check Null object
 static inline BOOL BZIsNull(id object)

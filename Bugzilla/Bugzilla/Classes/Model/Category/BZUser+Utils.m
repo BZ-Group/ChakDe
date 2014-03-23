@@ -11,10 +11,10 @@
 @implementation BZUser (Utils)
 
 
-+(BZUser *) registerUserWithData : (BZUser*)userData
++(BZUser *) registerUserWithData : (NSDictionary*)userData
         inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext{
     
-    NSString* userLoginId = [NSString stringWithFormat:@"%@", userData.login];
+    NSString* userLoginId = [NSString stringWithFormat:@"%@", userData[@"login"]];
     // Get the Already existing data
     BZUser *user = nil;
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"BZUser"];
@@ -33,18 +33,18 @@
         // handle the error
     }
     // Case 2:
-    // If the Journal doesn't Exist
+    // If the user doesn't Exist
     else if(![fetchResults count]){
         user = (BZUser *)[NSEntityDescription insertNewObjectForEntityForName:@"BZUser"
                                                      inManagedObjectContext:managedObjectContext];
         
-        [user setLogin:userData.login];
-        [user setPassword:userData.password];
-        [user setRemember:userData.remember];
+        [user setLogin:userData[@"login"]];
+        [user setPassword:userData[@"password"]];
+        [user setRemember:userData[@"remeber"]];
 
     }
     // Case 3:
-    // If the Journal Exists
+    // If the user Exists
     else {
         
         user = [fetchResults lastObject];
@@ -75,12 +75,12 @@
         
     }
     // Case 2:
-    // If the Journal doesn't Exist
+    // If the User doesn't Exist
     else if(![fetchResults count]){
         
     }
     // Case 3:
-    // If the Journal Exists
+    // If the Userz Exists
     else {
         
         user = [fetchResults lastObject];

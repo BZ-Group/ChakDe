@@ -10,4 +10,7 @@
 
 @interface BZUser (Utils)
 
++(BZUser *) registerUserWithData : (NSDictionary*)userData
+          inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext;
+
 @end

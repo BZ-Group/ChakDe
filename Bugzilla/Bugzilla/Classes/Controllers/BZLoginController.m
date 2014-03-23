@@ -8,6 +8,7 @@
 
 #import "BZLoginController.h"
 #import "BZWebServiceClient.h"
+#import "BZUser+Utils.h"
 
 @implementation BZLoginController
 
@@ -75,6 +76,9 @@ static BZWebServiceClient *client;
                                   [[NSUserDefaults standardUserDefaults] setValue:result.result[@"token"] forKey:@"kBZAccesstoken"];
                               }
                           }
+                          
+                          [BZUser registerUserWithData :result.result
+                                inManagedObjectContext :appDelegate.managedObjectContext];
                           // callback
                           completion(result.success, result.errorCode);
                           
