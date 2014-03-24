@@ -48,11 +48,6 @@ static NSMutableDictionary *contextArray;
 //-------------------------------------------------------------------------------------------------
 + (void)removeContext
 {
-    NSLog(@"context removed for : %@", [NSThread currentThread].name);
-    NSRange rangeCheck = [[NSThread currentThread].name rangeOfString:@"tierSummary"];
-    if (rangeCheck.location != NSNotFound) {
-       // [[UserDefault UserDefaultsInstance] setBoolValue:kTierSummaryDummyDataShownNeedScroller value:NO];
-    }
     [contextArray removeObjectForKey:[NSThread currentThread].name];
 }
 @end

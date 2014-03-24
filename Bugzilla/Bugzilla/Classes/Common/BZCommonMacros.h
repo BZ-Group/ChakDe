@@ -21,6 +21,7 @@
  *  author  :   anoop.sharma@ymail.com
  *  dated   :   16th Mar 2014
  */
+
 #define STR_CONST(strName, strValue) extern NSString* const strName
 #define appDelegate ((BZAppDelegate *)[UIApplication sharedApplication].delegate)
 
