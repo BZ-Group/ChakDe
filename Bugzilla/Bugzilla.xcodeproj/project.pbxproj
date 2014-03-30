@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BFA112E413F4792B4915386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED39A841ED4ABAB64929C4 /* libPods.a */; };
+		E53376B418E6DBEE00559857 /* BZProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53376B318E6DBEE00559857 /* BZProductController.m */; };
+		E53376B718E6DF3100559857 /* BZBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53376B618E6DF3100559857 /* BZBugController.m */; };
 		E55264A318C51C8A00721917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A218C51C8A00721917 /* Foundation.framework */; };
 		E55264A518C51C8A00721917 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A418C51C8A00721917 /* CoreGraphics.framework */; };
 		E55264A718C51C8A00721917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A618C51C8A00721917 /* UIKit.framework */; };
@@ -52,6 +54,10 @@
 /* Begin PBXFileReference section */
 		00851FCEFC5942C5A4B29F37 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B0ED39A841ED4ABAB64929C4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53376B218E6DBEE00559857 /* BZProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProductController.h; sourceTree = "<group>"; };
+		E53376B318E6DBEE00559857 /* BZProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProductController.m; sourceTree = "<group>"; };
+		E53376B518E6DF3100559857 /* BZBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugController.h; sourceTree = "<group>"; };
+		E53376B618E6DF3100559857 /* BZBugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugController.m; sourceTree = "<group>"; };
 		E552649F18C51C8A00721917 /* Bugzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55264A218C51C8A00721917 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E55264A418C51C8A00721917 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -329,6 +335,10 @@
 			children = (
 				E59FBBED18D0ECBD009B354C /* BZLoginController.h */,
 				E59FBBEE18D0ECBD009B354C /* BZLoginController.m */,
+				E53376B218E6DBEE00559857 /* BZProductController.h */,
+				E53376B318E6DBEE00559857 /* BZProductController.m */,
+				E53376B518E6DF3100559857 /* BZBugController.h */,
+				E53376B618E6DF3100559857 /* BZBugController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -513,6 +523,8 @@
 				F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */,
+				E53376B418E6DBEE00559857 /* BZProductController.m in Sources */,
+				E53376B718E6DF3100559857 /* BZBugController.m in Sources */,
 				E59FBBEF18D0ECBD009B354C /* BZLoginController.m in Sources */,
 				F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */,
 				F14703EB18D5BB6A0027F848 /* BZUser+Utils.m in Sources */,

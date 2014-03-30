@@ -40,5 +40,11 @@
     return dateString;
 }
 
++ (NSDate *)dateFromString:(NSString *)date andFormat:(NSString *)dateFormat
+{
+    NSDateFormatter *dateFormatter = [self dateFormatterWithString:dateFormat];
+    
+    return [dateFormatter dateFromString:date];
+}
 
 @end

@@ -42,7 +42,7 @@ static BZUser *currentUser;
                       if (result.success)
                       {
                           //Parsing and Model
-                          
+
                           // callback
                           completion(result.success, result.errorCode);
 
@@ -59,11 +59,9 @@ static BZUser *currentUser;
 
 -(void)invokeLoginWithDetails:(NSArray*)userData withBlock:(BZParseManagerCompletion)completion
 {
-    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
-                                  @"password":@"India@123"};
     //Create request
     [client invokeMethod:BZServiceLoginURI
-          withParameters:@[loginParams]
+          withParameters:userData
                   result:^(BZServiceResult *result){
                       
                       if (result.success)
@@ -74,7 +72,7 @@ static BZUser *currentUser;
                                   [[NSUserDefaults standardUserDefaults] setValue:result.result[@"token"] forKey:@"kBZAccesstoken"];
                               }
                           }
-                          currentUser = [BZUser saveUsersCredentials :loginParams
+                          currentUser = [BZUser saveUsersCredentials :[userData lastObject]
                                 inManagedObjectContext :appDelegate.managedObjectContext];
                           // callback
                           completion(result.success, result.errorCode);
@@ -92,9 +90,7 @@ static BZUser *currentUser;
 
 -(void)retrieveUserInfo:(id)userID withBlock:(BZParseManagerCompletion)completion
 {
-    //    NSDictionary* loginParams = @{@"login":userData[@"login"],
-    //                                  @"password":userData[@"password"]};
-    NSArray *ids = [NSArray arrayWithObjects:@"439387", nil];
+    NSArray *ids = [NSArray arrayWithObjects:@"64857", nil];
     NSDictionary* userIds = @{@"ids":ids};
     //Create request
     [client invokeMethod:BZServiceUserInfoURI

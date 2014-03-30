@@ -11,5 +11,10 @@
 @interface BZViewController : UIViewController
 
 - (IBAction)versionClicked:(id)sender;
+- (IBAction)loginClicked:(id)sender;
+- (IBAction)getAccessibleProducts:(id)sender;
+- (IBAction)getProductsDetails:(id)sender;
+- (IBAction)getBugs:(id)sender;
+- (IBAction)getBugDetail:(id)sender;
 
 @end

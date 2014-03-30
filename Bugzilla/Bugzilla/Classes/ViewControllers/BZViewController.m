@@ -8,6 +8,8 @@
 
 #import "BZViewController.h"
 #import "BZLoginController.h"
+#import "BZProductController.h"
+#import "BZBugController.h"
 
 
 @interface BZViewController ()
@@ -32,24 +34,30 @@
 {
     BZLoginController *bzLoginController = [BZLoginController sharedInstance];
     
-//    //Begin getBugzillaVersion
-//    [bzLoginController getBugzillaVersion:^(BOOL success, NSInteger errorCode)
-//    {
-//        if (success)
-//        {
-//            NSLog(@"Success");
-//        }
-//        else
-//        {
-//            NSLog(@"Fail");
-//        }
-//    }];
+    //Begin getBugzillaVersion
+    [bzLoginController getBugzillaVersion:^(BOOL success, NSInteger errorCode)
+    {
+        if (success)
+        {
+            NSLog(@"Success");
+        }
+        else
+        {
+            NSLog(@"Fail");
+        }
+    }];
     
 
     
-    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
+
+}
+
+- (IBAction)loginClicked:(id)sender
+{
+    NSDictionary* loginParams = @{@"login":@"bugzillademo1@outlook.com",
                                   @"password":@"India@123"};
-    //Begin getBugzillaVersion
+    //Begin login Clicked
+    BZLoginController *bzLoginController = [BZLoginController sharedInstance];
     [bzLoginController invokeLoginWithDetails:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
      {
          if (success)
@@ -61,29 +69,98 @@
              NSLog(@"Fail");
          }
      }];
-    
-//    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
-//                                  @"password":@"India@123"};
-//    //Begin getBugzillaVersion
-//    [bzLoginController retrieveUserInfo:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
-//     {
-//         if (success)
-//         {
-//             NSLog(@"Success");
-//         }
-//         else
-//         {
-//             NSLog(@"Fail");
-//         }
-//     }];
 }
-- (IBAction)getUserInfo:(id)sender {
+
+- (IBAction)getAccessibleProducts:(id)sender
+{
+    //Get Accessible Products Ids
+    BZProductController *bzProductController = [BZProductController sharedInstance];
+    [bzProductController getAccessibleProductIdsWithCompletion:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
+}
+
+- (IBAction)getProductsDetails:(id)sender
+{
+    //Get Accessible Products Ids
+    BZProductController *bzProductController = [BZProductController sharedInstance];
+    [bzProductController getProductDetailsUsingProductIds:@[@2]  //,@3,@19,@1,@4
+                                             ProductNames:nil
+                                                     Type:nil
+                                           withCompletion:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
+}
+
+- (IBAction)getBugs:(id)sender
+{
+    //Get Bugs
+    BZBugController *bzBugController = [BZBugController sharedInstance];
+    [bzBugController getBugForAssignedTo:nil
+                               Component:nil
+                            CreationTime:nil
+                                 Creator:nil
+                                      Id:nil  //23830 //23943
+                          LastChangeTime:@"2014-03-25 14:08:00 +0000"
+                                   Limit:nil
+                                Priority:nil
+                                 Product:nil
+                                Severity:nil
+                                  Status:nil
+                                 Summary:nil
+                          withCompletion:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
+}
+
+- (IBAction)getBugDetail:(id)sender
+{
+    //Get Bugs
+    BZBugController *bzBugController = [BZBugController sharedInstance];
+    [bzBugController getBugDetailForBugIds:@[@23830,@23943]
+                            withCompletion:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
+}
+
+
+- (IBAction)getUserInfo:(id)sender
+{
+     //Begin getUserInfo
     BZLoginController *bzLoginController = [BZLoginController sharedInstance];
-    
-    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
-                                  @"password":@"India@123"};
-    //Begin getBugzillaVersion
-    [bzLoginController retrieveUserInfo:@[loginParams] withBlock:^(BOOL success, NSInteger errorCode)
+    [bzLoginController retrieveUserInfo:nil withBlock:^(BOOL success, NSInteger errorCode)
      {
          if (success)
          {

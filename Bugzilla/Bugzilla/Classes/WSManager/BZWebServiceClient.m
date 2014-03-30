@@ -73,6 +73,11 @@
     return [super HTTPRequestOperationWithRequest:urlRequest
     success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
+///////////This is for Testing Saved Cookie///////////
+//////////cookies are not accepted for GET requests for JSONRPC.Use the token or valid login parameters for those requests///////////
+//        NSArray* cookies = [NSHTTPCookie cookiesWithResponseHeaderFields:[operation.response allHeaderFields] forURL:[operation.response URL]];
+//        NSLog(@"cookies count : %d",cookies.count);
+        
         NSInteger code = 0;
         NSString *message = nil;
         
