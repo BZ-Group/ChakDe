@@ -12,7 +12,7 @@
 #pragma mark - Constants
 
 static NSString * const AFJSONRPCErrorDomain              = @"com.alamofire.networking.json-rpc";
-static NSString * const BugzillaServerBaseURLString       = @"https://landfill.bugzilla.org/bugzilla-tip/jsonrpc.cgi";  //@"https://bugzilla.mozilla.org/jsonrpc.cgi";
+static NSString * const BugzillaServerBaseURLString       = /*@"https://landfill.bugzilla.org/bugzilla-tip/jsonrpc.cgi"; */ @"https://bugzilla.mozilla.org/jsonrpc.cgi";
 
 //// urls
 static NSString * const BZServiceVersionURI               = @"Bugzilla.version";

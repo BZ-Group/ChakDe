@@ -30,7 +30,7 @@
     NSArray *fetchResults = [[NSArray alloc] init];
     fetchResults = [managedObjectContext executeFetchRequest:request error:&error] ;
     
-    NSLog(@"DB Error : %@",error );
+    //NSLog(@"DB Error : %@",error );
     
     // Case 1:
     // If Error occurs

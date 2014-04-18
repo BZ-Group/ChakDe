@@ -54,7 +54,7 @@
 
 - (IBAction)loginClicked:(id)sender
 {
-    NSDictionary* loginParams = @{@"login":@"bugzillademo1@outlook.com",
+    NSDictionary* loginParams = @{@"login":@"anoop.sharma@ymail.com",
                                   @"password":@"India@123"};
     //Begin login Clicked
     BZLoginController *bzLoginController = [BZLoginController sharedInstance];

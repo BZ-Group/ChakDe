@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BZBugInfo" representedClassName="BZBugInfo" syncable="YES">
+        <relationship name="bugId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugs" inverseName="bugDetails" inverseEntity="BZBugs" syncable="YES"/>
+    </entity>
+    <entity name="BZBugs" representedClassName="BZBugs" syncable="YES">
+        <attribute name="assigned_to" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="component" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_open" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="severity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bugDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugInfo" inverseName="bugId" inverseEntity="BZBugInfo" syncable="YES"/>
+    </entity>
+    <entity name="BZProducts" representedClassName="BZProducts" syncable="YES">
+        <attribute name="comp_default_assigned_to" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comp_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comp_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="comp_is_active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="comp_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prod_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="BZUser" representedClassName="BZUser" syncable="YES">
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,5 +48,8 @@
     <elements>
         <element name="BZUser" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="BZUserInfo" positionX="-54" positionY="18" width="128" height="193"/>
+        <element name="BZBugs" positionX="-63" positionY="81" width="128" height="208"/>
+        <element name="BZBugInfo" positionX="-54" positionY="144" width="128" height="58"/>
+        <element name="BZProducts" positionX="-36" positionY="135" width="128" height="178"/>
     </elements>
 </model>

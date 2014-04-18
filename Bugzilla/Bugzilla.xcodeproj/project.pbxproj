@@ -37,6 +37,9 @@
 		F147040418D70D870027F848 /* BZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F147040318D70D870027F848 /* BZUserInfo.m */; };
 		F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F147041D18D7FDCA0027F848 /* BZDBManager.m */; };
 		F187445B18DEBFE800798C56 /* BZUserInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */; };
+		F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA319015676000AADB1 /* BZBugInfo.m */; };
+		F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA519015676000AADB1 /* BZBugs.m */; };
+		F1AAFDAD19015758000AADB1 /* BZProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDAC19015758000AADB1 /* BZProducts.m */; };
 		F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1C304FE18CF4CF8001BFC50 /* BZModel.xcdatamodeld */; };
 		F1C3050218CF4D91001BFC50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C3050118CF4D91001BFC50 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,12 @@
 		F147041D18D7FDCA0027F848 /* BZDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDBManager.m; sourceTree = "<group>"; };
 		F187445918DEBFE800798C56 /* BZUserInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUserInfo+Utils.h"; sourceTree = "<group>"; };
 		F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUserInfo+Utils.m"; sourceTree = "<group>"; };
+		F1AAFDA219015676000AADB1 /* BZBugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugInfo.h; sourceTree = "<group>"; };
+		F1AAFDA319015676000AADB1 /* BZBugInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugInfo.m; sourceTree = "<group>"; };
+		F1AAFDA419015676000AADB1 /* BZBugs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugs.h; sourceTree = "<group>"; };
+		F1AAFDA519015676000AADB1 /* BZBugs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugs.m; sourceTree = "<group>"; };
+		F1AAFDAB19015758000AADB1 /* BZProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProducts.h; sourceTree = "<group>"; };
+		F1AAFDAC19015758000AADB1 /* BZProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProducts.m; sourceTree = "<group>"; };
 		F1C304FF18CF4CF8001BFC50 /* BZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BZModel.xcdatamodel; sourceTree = "<group>"; };
 		F1C3050118CF4D91001BFC50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -261,11 +270,17 @@
 		E5831C3218C5261900D5272B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F14703E818D5B4830027F848 /* Category */,
+				F1AAFDAB19015758000AADB1 /* BZProducts.h */,
+				F1AAFDAC19015758000AADB1 /* BZProducts.m */,
+				F1AAFDA219015676000AADB1 /* BZBugInfo.h */,
+				F1AAFDA319015676000AADB1 /* BZBugInfo.m */,
+				F1AAFDA419015676000AADB1 /* BZBugs.h */,
+				F1AAFDA519015676000AADB1 /* BZBugs.m */,
 				F147040218D70D870027F848 /* BZUserInfo.h */,
 				F147040318D70D870027F848 /* BZUserInfo.m */,
 				F14703E518D5B1DD0027F848 /* BZUser.h */,
 				F14703E618D5B1DD0027F848 /* BZUser.m */,
+				F14703E818D5B4830027F848 /* Category */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -518,9 +533,11 @@
 				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
 				E59FBBE818D0E8FD009B354C /* BZAppDelegate.m in Sources */,
 				F147040418D70D870027F848 /* BZUserInfo.m in Sources */,
+				F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */,
 				E59FBBF318D44398009B354C /* BZViewController.m in Sources */,
 				E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */,
 				F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */,
+				F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */,
 				E53376B418E6DBEE00559857 /* BZProductController.m in Sources */,
@@ -530,6 +547,7 @@
 				F14703EB18D5BB6A0027F848 /* BZUser+Utils.m in Sources */,
 				F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */,
 				F14703E718D5B1DD0027F848 /* BZUser.m in Sources */,
+				F1AAFDAD19015758000AADB1 /* BZProducts.m in Sources */,
 				E5831C4418C52B5500D5272B /* BZServiceResult.m in Sources */,
 				E55264AF18C51C8A00721917 /* main.m in Sources */,
 			);
