@@ -2,7 +2,7 @@
 //  BZUserInfo.m
 //  Bugzilla
 //
-//  Created by Anoop on 3/17/14.
+//  Created by Anoop on 4/18/14.
 //  Copyright (c) 2014 iCoder. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 @implementation BZUserInfo
 
 @dynamic can_login;
-@dynamic email;
 @dynamic desc;
+@dynamic email;
 @dynamic ids;
 @dynamic is_new;
 @dynamic last_activity;

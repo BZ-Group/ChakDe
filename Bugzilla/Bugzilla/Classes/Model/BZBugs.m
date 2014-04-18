@@ -1,13 +1,14 @@
 //
 //  BZBugs.m
-//  Pods
+//  Bugzilla
 //
 //  Created by Anoop on 4/18/14.
-//
+//  Copyright (c) 2014 iCoder. All rights reserved.
 //
 
 #import "BZBugs.h"
 #import "BZBugInfo.h"
+#import "BZUser.h"
 
 
 @implementation BZBugs
@@ -23,5 +24,6 @@
 @dynamic status;
 @dynamic summary;
 @dynamic bugDetails;
+@dynamic hasUser;
 
 @end

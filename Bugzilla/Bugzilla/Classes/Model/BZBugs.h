@@ -1,15 +1,15 @@
 //
 //  BZBugs.h
-//  Pods
+//  Bugzilla
 //
 //  Created by Anoop on 4/18/14.
-//
+//  Copyright (c) 2014 iCoder. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class BZBugInfo;
+@class BZBugInfo, BZUser;
 
 @interface BZBugs : NSManagedObject
 
@@ -24,5 +24,6 @@
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) NSString * summary;
 @property (nonatomic, retain) BZBugInfo *bugDetails;
+@property (nonatomic, retain) BZUser *hasUser;
 
 @end
