@@ -2,7 +2,7 @@
 //  BZBugs.h
 //  Bugzilla
 //
-//  Created by Anoop on 4/18/14.
+//  Created by Anoop on 5/25/14.
 //  Copyright (c) 2014 iCoder. All rights reserved.
 //
 
@@ -14,9 +14,9 @@
 @interface BZBugs : NSManagedObject
 
 @property (nonatomic, retain) NSString * assigned_to;
+@property (nonatomic, retain) NSNumber * bug_id;
 @property (nonatomic, retain) NSString * component;
 @property (nonatomic, retain) NSString * creator;
-@property (nonatomic, retain) NSNumber * bug_id;
 @property (nonatomic, retain) NSNumber * is_open;
 @property (nonatomic, retain) NSString * priority;
 @property (nonatomic, retain) NSString * product;

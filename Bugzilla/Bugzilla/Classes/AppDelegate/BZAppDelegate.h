@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BZUser.h"
+
+//static BZUser *currentUser;
 
 @interface BZAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) BZUser *currentUser;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

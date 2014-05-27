@@ -16,7 +16,6 @@
 #pragma mark - Constants
 
 static BZWebServiceClient *client;
-static BZUser *currentUser;
 
 + (BZLoginController *)sharedInstance
 {
@@ -72,7 +71,7 @@ static BZUser *currentUser;
                                   [[NSUserDefaults standardUserDefaults] setValue:result.result[@"token"] forKey:@"kBZAccesstoken"];
                               }
                           }
-                          currentUser = [BZUser saveUsersCredentials :[userData lastObject]
+                          appDelegate.currentUser = [BZUser saveUsersCredentials :[userData lastObject]
                                 inManagedObjectContext :appDelegate.managedObjectContext];
                           // callback
                           completion(result.success, result.errorCode);
@@ -100,7 +99,7 @@ static BZUser *currentUser;
                       if (result.success)
                       {
                           
-                          [BZUserInfo  saveUserDetails:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:currentUser];
+                          [BZUserInfo  saveUserDetails:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:appDelegate.currentUser];
                           // callback
                           completion(result.success, result.errorCode);
 

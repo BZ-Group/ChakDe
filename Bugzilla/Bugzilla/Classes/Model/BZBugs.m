@@ -2,7 +2,7 @@
 //  BZBugs.m
 //  Bugzilla
 //
-//  Created by Anoop on 4/18/14.
+//  Created by Anoop on 5/25/14.
 //  Copyright (c) 2014 iCoder. All rights reserved.
 //
 
@@ -14,9 +14,9 @@
 @implementation BZBugs
 
 @dynamic assigned_to;
+@dynamic bug_id;
 @dynamic component;
 @dynamic creator;
-@dynamic bug_id;
 @dynamic is_open;
 @dynamic priority;
 @dynamic product;

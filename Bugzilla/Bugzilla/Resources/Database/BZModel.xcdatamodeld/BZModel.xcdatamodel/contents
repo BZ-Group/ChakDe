@@ -27,12 +27,14 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prod_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="hasUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUser" inverseName="hasProducts" inverseEntity="BZUser" syncable="YES"/>
     </entity>
     <entity name="BZUser" representedClassName="BZUser" syncable="YES">
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remember" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="hasBug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugs" inverseName="hasUser" inverseEntity="BZBugs" syncable="YES"/>
+        <relationship name="hasProducts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZProducts" inverseName="hasUser" inverseEntity="BZProducts" syncable="YES"/>
         <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUserInfo" inverseName="hasUser" inverseEntity="BZUserInfo" syncable="YES"/>
     </entity>
     <entity name="BZUserInfo" representedClassName="BZUserInfo" syncable="YES">
@@ -48,10 +50,10 @@
         <relationship name="hasUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUser" inverseName="userInfo" inverseEntity="BZUser" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="BZUserInfo" positionX="-54" positionY="18" width="128" height="193"/>
-        <element name="BZBugs" positionX="-63" positionY="81" width="128" height="223"/>
         <element name="BZBugInfo" positionX="-54" positionY="144" width="128" height="58"/>
-        <element name="BZProducts" positionX="-36" positionY="135" width="128" height="178"/>
+        <element name="BZBugs" positionX="-63" positionY="81" width="128" height="223"/>
+        <element name="BZProducts" positionX="-36" positionY="135" width="128" height="193"/>
+        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="BZUserInfo" positionX="-54" positionY="18" width="128" height="193"/>
     </elements>
 </model>
