@@ -36,6 +36,7 @@
     if(!fetchResults || [fetchResults count] > 1){
         // handle the error
     }
+    
     // Case 2:
     // If the user doesn't Exist
     else if(![fetchResults count]){
