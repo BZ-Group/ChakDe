@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
     #import "BZAppConfig.h"
     #import "BZCommonMacros.h"
+#import "NSManagedObject+Utils.h"
 #endif

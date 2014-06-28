@@ -8,8 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3BFA112E413F4792B4915386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED39A841ED4ABAB64929C4 /* libPods.a */; };
-		E53376B418E6DBEE00559857 /* BZProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53376B318E6DBEE00559857 /* BZProductController.m */; };
-		E53376B718E6DF3100559857 /* BZBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53376B618E6DF3100559857 /* BZBugController.m */; };
+		6ED1CC0A195EC165007BF42B /* BZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */; };
+		6ED1CC0B195EC165007BF42B /* BZBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD4195EC165007BF42B /* BZBugController.m */; };
+		6ED1CC0C195EC165007BF42B /* BZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD6195EC165007BF42B /* BZLoginController.m */; };
+		6ED1CC0D195EC165007BF42B /* BZProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD8195EC165007BF42B /* BZProductController.m */; };
+		6ED1CC1F195EC165007BF42B /* BZServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC07195EC165007BF42B /* BZServiceResult.m */; };
+		6ED1CC20195EC165007BF42B /* BZWebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC09195EC165007BF42B /* BZWebServiceClient.m */; };
+		6ED1CC2E195EC1AC007BF42B /* BZComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC22195EC1AC007BF42B /* BZComponents.m */; };
+		6ED1CC2F195EC1AC007BF42B /* BZBugInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC25195EC1AC007BF42B /* BZBugInfo+Utils.m */; };
+		6ED1CC30195EC1AC007BF42B /* BZBugs+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC27195EC1AC007BF42B /* BZBugs+Utils.m */; };
+		6ED1CC31195EC1AC007BF42B /* BZProducts+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC29195EC1AC007BF42B /* BZProducts+Utils.m */; };
+		6ED1CC32195EC1AC007BF42B /* BZUser+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC2B195EC1AC007BF42B /* BZUser+Utils.m */; };
+		6ED1CC33195EC1AC007BF42B /* BZUserInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CC2D195EC1AC007BF42B /* BZUserInfo+Utils.m */; };
 		E55264A318C51C8A00721917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A218C51C8A00721917 /* Foundation.framework */; };
 		E55264A518C51C8A00721917 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A418C51C8A00721917 /* CoreGraphics.framework */; };
 		E55264A718C51C8A00721917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A618C51C8A00721917 /* UIKit.framework */; };
@@ -22,27 +32,18 @@
 		E55264C418C51C8A00721917 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E55264A618C51C8A00721917 /* UIKit.framework */; };
 		E55264CC18C51C8A00721917 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E55264CA18C51C8A00721917 /* InfoPlist.strings */; };
 		E55264CE18C51C8A00721917 /* BugzillaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55264CD18C51C8A00721917 /* BugzillaTests.m */; };
-		E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */; };
-		E5831C4418C52B5500D5272B /* BZServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4318C52B5500D5272B /* BZServiceResult.m */; };
 		E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4918C5327D00D5272B /* NSDate+Formatter.m */; };
 		E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4B18C5327D00D5272B /* NSString+Email.m */; };
 		E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5218C5331200D5272B /* BZDeleteThisControl.m */; };
 		E5831C5918C533D200D5272B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5831C5818C533D200D5272B /* bg.png */; };
-		E59FBBE818D0E8FD009B354C /* BZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E59FBBE718D0E8FD009B354C /* BZAppDelegate.m */; };
-		E59FBBEF18D0ECBD009B354C /* BZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59FBBEE18D0ECBD009B354C /* BZLoginController.m */; };
 		E59FBBF318D44398009B354C /* BZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59FBBF218D44398009B354C /* BZViewController.m */; };
 		F14703E718D5B1DD0027F848 /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703E618D5B1DD0027F848 /* BZUser.m */; };
-		F14703EB18D5BB6A0027F848 /* BZUser+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703EA18D5BB6A0027F848 /* BZUser+Utils.m */; };
 		F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703F418D6ADE20027F848 /* NSManagedObject+Utils.m */; };
 		F147040418D70D870027F848 /* BZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F147040318D70D870027F848 /* BZUserInfo.m */; };
 		F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F147041D18D7FDCA0027F848 /* BZDBManager.m */; };
-		F187445B18DEBFE800798C56 /* BZUserInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */; };
 		F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA319015676000AADB1 /* BZBugInfo.m */; };
 		F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA519015676000AADB1 /* BZBugs.m */; };
 		F1AAFDAD19015758000AADB1 /* BZProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDAC19015758000AADB1 /* BZProducts.m */; };
-		F1AAFDB31901595E000AADB1 /* BZBugs+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDB21901595E000AADB1 /* BZBugs+Utils.m */; };
-		F1AAFDB619015972000AADB1 /* BZBugInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDB519015972000AADB1 /* BZBugInfo+Utils.m */; };
-		F1AAFDB919015999000AADB1 /* BZProducts+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDB819015999000AADB1 /* BZProducts+Utils.m */; };
 		F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1C304FE18CF4CF8001BFC50 /* BZModel.xcdatamodeld */; };
 		F1C3050218CF4D91001BFC50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C3050118CF4D91001BFC50 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -59,11 +60,31 @@
 
 /* Begin PBXFileReference section */
 		00851FCEFC5942C5A4B29F37 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6ED1CBD0195EC165007BF42B /* BZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAppDelegate.h; sourceTree = "<group>"; };
+		6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppDelegate.m; sourceTree = "<group>"; };
+		6ED1CBD3195EC165007BF42B /* BZBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugController.h; sourceTree = "<group>"; };
+		6ED1CBD4195EC165007BF42B /* BZBugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugController.m; sourceTree = "<group>"; };
+		6ED1CBD5195EC165007BF42B /* BZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZLoginController.h; sourceTree = "<group>"; };
+		6ED1CBD6195EC165007BF42B /* BZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZLoginController.m; sourceTree = "<group>"; };
+		6ED1CBD7195EC165007BF42B /* BZProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProductController.h; sourceTree = "<group>"; };
+		6ED1CBD8195EC165007BF42B /* BZProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProductController.m; sourceTree = "<group>"; };
+		6ED1CC06195EC165007BF42B /* BZServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZServiceResult.h; sourceTree = "<group>"; };
+		6ED1CC07195EC165007BF42B /* BZServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZServiceResult.m; sourceTree = "<group>"; };
+		6ED1CC08195EC165007BF42B /* BZWebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZWebServiceClient.h; sourceTree = "<group>"; };
+		6ED1CC09195EC165007BF42B /* BZWebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebServiceClient.m; sourceTree = "<group>"; };
+		6ED1CC21195EC1AC007BF42B /* BZComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZComponents.h; sourceTree = "<group>"; };
+		6ED1CC22195EC1AC007BF42B /* BZComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZComponents.m; sourceTree = "<group>"; };
+		6ED1CC24195EC1AC007BF42B /* BZBugInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZBugInfo+Utils.h"; sourceTree = "<group>"; };
+		6ED1CC25195EC1AC007BF42B /* BZBugInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZBugInfo+Utils.m"; sourceTree = "<group>"; };
+		6ED1CC26195EC1AC007BF42B /* BZBugs+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZBugs+Utils.h"; sourceTree = "<group>"; };
+		6ED1CC27195EC1AC007BF42B /* BZBugs+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZBugs+Utils.m"; sourceTree = "<group>"; };
+		6ED1CC28195EC1AC007BF42B /* BZProducts+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZProducts+Utils.h"; sourceTree = "<group>"; };
+		6ED1CC29195EC1AC007BF42B /* BZProducts+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZProducts+Utils.m"; sourceTree = "<group>"; };
+		6ED1CC2A195EC1AC007BF42B /* BZUser+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUser+Utils.h"; sourceTree = "<group>"; };
+		6ED1CC2B195EC1AC007BF42B /* BZUser+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUser+Utils.m"; sourceTree = "<group>"; };
+		6ED1CC2C195EC1AC007BF42B /* BZUserInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUserInfo+Utils.h"; sourceTree = "<group>"; };
+		6ED1CC2D195EC1AC007BF42B /* BZUserInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUserInfo+Utils.m"; sourceTree = "<group>"; };
 		B0ED39A841ED4ABAB64929C4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E53376B218E6DBEE00559857 /* BZProductController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProductController.h; sourceTree = "<group>"; };
-		E53376B318E6DBEE00559857 /* BZProductController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProductController.m; sourceTree = "<group>"; };
-		E53376B518E6DF3100559857 /* BZBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugController.h; sourceTree = "<group>"; };
-		E53376B618E6DF3100559857 /* BZBugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugController.m; sourceTree = "<group>"; };
 		E552649F18C51C8A00721917 /* Bugzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55264A218C51C8A00721917 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E55264A418C51C8A00721917 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,10 +102,6 @@
 		E55264CD18C51C8A00721917 /* BugzillaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugzillaTests.m; sourceTree = "<group>"; };
 		E5831C3A18C5288700D5272B /* BZCommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZCommonMacros.h; sourceTree = "<group>"; };
 		E5831C3B18C5288700D5272B /* NSLogSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogSettings.h; sourceTree = "<group>"; };
-		E5831C3C18C52AF600D5272B /* BZWebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZWebServiceClient.h; sourceTree = "<group>"; };
-		E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebServiceClient.m; sourceTree = "<group>"; };
-		E5831C4218C52B5500D5272B /* BZServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZServiceResult.h; sourceTree = "<group>"; };
-		E5831C4318C52B5500D5272B /* BZServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZServiceResult.m; sourceTree = "<group>"; };
 		E5831C4818C5327D00D5272B /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
 		E5831C4918C5327D00D5272B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		E5831C4A18C5327D00D5272B /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
@@ -92,16 +109,10 @@
 		E5831C5118C5331200D5272B /* BZDeleteThisControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDeleteThisControl.h; sourceTree = "<group>"; };
 		E5831C5218C5331200D5272B /* BZDeleteThisControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDeleteThisControl.m; sourceTree = "<group>"; };
 		E5831C5818C533D200D5272B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		E59FBBE618D0E8FD009B354C /* BZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAppDelegate.h; sourceTree = "<group>"; };
-		E59FBBE718D0E8FD009B354C /* BZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppDelegate.m; sourceTree = "<group>"; };
-		E59FBBED18D0ECBD009B354C /* BZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZLoginController.h; sourceTree = "<group>"; };
-		E59FBBEE18D0ECBD009B354C /* BZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZLoginController.m; sourceTree = "<group>"; };
 		E59FBBF118D44398009B354C /* BZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZViewController.h; sourceTree = "<group>"; };
 		E59FBBF218D44398009B354C /* BZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZViewController.m; sourceTree = "<group>"; };
 		F14703E518D5B1DD0027F848 /* BZUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUser.h; sourceTree = "<group>"; };
 		F14703E618D5B1DD0027F848 /* BZUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUser.m; sourceTree = "<group>"; };
-		F14703E918D5BB6A0027F848 /* BZUser+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUser+Utils.h"; sourceTree = "<group>"; };
-		F14703EA18D5BB6A0027F848 /* BZUser+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUser+Utils.m"; sourceTree = "<group>"; };
 		F14703F118D6A78B0027F848 /* BZAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BZAppConfig.h; sourceTree = "<group>"; };
 		F14703F318D6ADE20027F848 /* NSManagedObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Utils.h"; sourceTree = "<group>"; };
 		F14703F418D6ADE20027F848 /* NSManagedObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Utils.m"; sourceTree = "<group>"; };
@@ -109,20 +120,12 @@
 		F147040318D70D870027F848 /* BZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUserInfo.m; sourceTree = "<group>"; };
 		F147041C18D7FDCA0027F848 /* BZDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDBManager.h; sourceTree = "<group>"; };
 		F147041D18D7FDCA0027F848 /* BZDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDBManager.m; sourceTree = "<group>"; };
-		F187445918DEBFE800798C56 /* BZUserInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZUserInfo+Utils.h"; sourceTree = "<group>"; };
-		F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZUserInfo+Utils.m"; sourceTree = "<group>"; };
 		F1AAFDA219015676000AADB1 /* BZBugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugInfo.h; sourceTree = "<group>"; };
 		F1AAFDA319015676000AADB1 /* BZBugInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugInfo.m; sourceTree = "<group>"; };
 		F1AAFDA419015676000AADB1 /* BZBugs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugs.h; sourceTree = "<group>"; };
 		F1AAFDA519015676000AADB1 /* BZBugs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugs.m; sourceTree = "<group>"; };
 		F1AAFDAB19015758000AADB1 /* BZProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZProducts.h; sourceTree = "<group>"; };
 		F1AAFDAC19015758000AADB1 /* BZProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZProducts.m; sourceTree = "<group>"; };
-		F1AAFDB11901595E000AADB1 /* BZBugs+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZBugs+Utils.h"; sourceTree = "<group>"; };
-		F1AAFDB21901595E000AADB1 /* BZBugs+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZBugs+Utils.m"; sourceTree = "<group>"; };
-		F1AAFDB419015972000AADB1 /* BZBugInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZBugInfo+Utils.h"; sourceTree = "<group>"; };
-		F1AAFDB519015972000AADB1 /* BZBugInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZBugInfo+Utils.m"; sourceTree = "<group>"; };
-		F1AAFDB719015999000AADB1 /* BZProducts+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BZProducts+Utils.h"; sourceTree = "<group>"; };
-		F1AAFDB819015999000AADB1 /* BZProducts+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BZProducts+Utils.m"; sourceTree = "<group>"; };
 		F1C304FF18CF4CF8001BFC50 /* BZModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BZModel.xcdatamodel; sourceTree = "<group>"; };
 		F1C3050118CF4D91001BFC50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -153,6 +156,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6ED1CBCF195EC165007BF42B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1CBD0195EC165007BF42B /* BZAppDelegate.h */,
+				6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6ED1CBD2195EC165007BF42B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1CBD3195EC165007BF42B /* BZBugController.h */,
+				6ED1CBD4195EC165007BF42B /* BZBugController.m */,
+				6ED1CBD5195EC165007BF42B /* BZLoginController.h */,
+				6ED1CBD6195EC165007BF42B /* BZLoginController.m */,
+				6ED1CBD7195EC165007BF42B /* BZProductController.h */,
+				6ED1CBD8195EC165007BF42B /* BZProductController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6ED1CC05195EC165007BF42B /* WSManager */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1CC06195EC165007BF42B /* BZServiceResult.h */,
+				6ED1CC07195EC165007BF42B /* BZServiceResult.m */,
+				6ED1CC08195EC165007BF42B /* BZWebServiceClient.h */,
+				6ED1CC09195EC165007BF42B /* BZWebServiceClient.m */,
+			);
+			path = WSManager;
+			sourceTree = "<group>";
+		};
+		6ED1CC23195EC1AC007BF42B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1CC24195EC1AC007BF42B /* BZBugInfo+Utils.h */,
+				6ED1CC25195EC1AC007BF42B /* BZBugInfo+Utils.m */,
+				6ED1CC26195EC1AC007BF42B /* BZBugs+Utils.h */,
+				6ED1CC27195EC1AC007BF42B /* BZBugs+Utils.m */,
+				6ED1CC28195EC1AC007BF42B /* BZProducts+Utils.h */,
+				6ED1CC29195EC1AC007BF42B /* BZProducts+Utils.m */,
+				6ED1CC2A195EC1AC007BF42B /* BZUser+Utils.h */,
+				6ED1CC2B195EC1AC007BF42B /* BZUser+Utils.m */,
+				6ED1CC2C195EC1AC007BF42B /* BZUserInfo+Utils.h */,
+				6ED1CC2D195EC1AC007BF42B /* BZUserInfo+Utils.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		E552649618C51C8900721917 = {
 			isa = PBXGroup;
 			children = (
@@ -230,16 +283,16 @@
 		E5831C2818C5261900D5272B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6ED1CBCF195EC165007BF42B /* AppDelegate */,
+				6ED1CBD2195EC165007BF42B /* Controllers */,
+				6ED1CC05195EC165007BF42B /* WSManager */,
 				F147041B18D7FDAC0027F848 /* DBManager */,
 				E59FBBF018D44398009B354C /* ViewControllers */,
-				E59FBBEB18D0E948009B354C /* Controllers */,
-				E59FBBE518D0E8FD009B354C /* AppDelegate */,
 				E5831C2B18C5261900D5272B /* Common */,
 				E5831C2F18C5261900D5272B /* Controls */,
 				E5831C3018C5261900D5272B /* Extensions */,
 				E5831C3218C5261900D5272B /* Model */,
 				E5831C3318C5261900D5272B /* Parser */,
-				E5831C3418C5261900D5272B /* WSManager */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -279,6 +332,9 @@
 		E5831C3218C5261900D5272B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6ED1CC23195EC1AC007BF42B /* Category */,
+				6ED1CC21195EC1AC007BF42B /* BZComponents.h */,
+				6ED1CC22195EC1AC007BF42B /* BZComponents.m */,
 				F1AAFDAB19015758000AADB1 /* BZProducts.h */,
 				F1AAFDAC19015758000AADB1 /* BZProducts.m */,
 				F1AAFDA219015676000AADB1 /* BZBugInfo.h */,
@@ -289,7 +345,6 @@
 				F147040318D70D870027F848 /* BZUserInfo.m */,
 				F14703E518D5B1DD0027F848 /* BZUser.h */,
 				F14703E618D5B1DD0027F848 /* BZUser.m */,
-				F14703E818D5B4830027F848 /* Category */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,17 +354,6 @@
 			children = (
 			);
 			path = Parser;
-			sourceTree = "<group>";
-		};
-		E5831C3418C5261900D5272B /* WSManager */ = {
-			isa = PBXGroup;
-			children = (
-				E5831C3C18C52AF600D5272B /* BZWebServiceClient.h */,
-				E5831C3D18C52AF600D5272B /* BZWebServiceClient.m */,
-				E5831C4218C52B5500D5272B /* BZServiceResult.h */,
-				E5831C4318C52B5500D5272B /* BZServiceResult.m */,
-			);
-			path = WSManager;
 			sourceTree = "<group>";
 		};
 		E5831C3518C5261900D5272B /* Resources */ = {
@@ -345,28 +389,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		E59FBBE518D0E8FD009B354C /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				E59FBBE618D0E8FD009B354C /* BZAppDelegate.h */,
-				E59FBBE718D0E8FD009B354C /* BZAppDelegate.m */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		E59FBBEB18D0E948009B354C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E59FBBED18D0ECBD009B354C /* BZLoginController.h */,
-				E59FBBEE18D0ECBD009B354C /* BZLoginController.m */,
-				E53376B218E6DBEE00559857 /* BZProductController.h */,
-				E53376B318E6DBEE00559857 /* BZProductController.m */,
-				E53376B518E6DF3100559857 /* BZBugController.h */,
-				E53376B618E6DF3100559857 /* BZBugController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		E59FBBF018D44398009B354C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,23 +396,6 @@
 				E59FBBF218D44398009B354C /* BZViewController.m */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F14703E818D5B4830027F848 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F187445918DEBFE800798C56 /* BZUserInfo+Utils.h */,
-				F187445A18DEBFE800798C56 /* BZUserInfo+Utils.m */,
-				F14703E918D5BB6A0027F848 /* BZUser+Utils.h */,
-				F14703EA18D5BB6A0027F848 /* BZUser+Utils.m */,
-				F1AAFDB11901595E000AADB1 /* BZBugs+Utils.h */,
-				F1AAFDB21901595E000AADB1 /* BZBugs+Utils.m */,
-				F1AAFDB419015972000AADB1 /* BZBugInfo+Utils.h */,
-				F1AAFDB519015972000AADB1 /* BZBugInfo+Utils.m */,
-				F1AAFDB719015999000AADB1 /* BZProducts+Utils.h */,
-				F1AAFDB819015999000AADB1 /* BZProducts+Utils.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		F147041B18D7FDAC0027F848 /* DBManager */ = {
@@ -544,29 +549,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F187445B18DEBFE800798C56 /* BZUserInfo+Utils.m in Sources */,
-				F1AAFDB919015999000AADB1 /* BZProducts+Utils.m in Sources */,
+				6ED1CC1F195EC165007BF42B /* BZServiceResult.m in Sources */,
+				6ED1CC2E195EC1AC007BF42B /* BZComponents.m in Sources */,
+				6ED1CC0B195EC165007BF42B /* BZBugController.m in Sources */,
+				6ED1CC0D195EC165007BF42B /* BZProductController.m in Sources */,
+				6ED1CC2F195EC1AC007BF42B /* BZBugInfo+Utils.m in Sources */,
+				6ED1CC31195EC1AC007BF42B /* BZProducts+Utils.m in Sources */,
+				6ED1CC30195EC1AC007BF42B /* BZBugs+Utils.m in Sources */,
 				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
-				E59FBBE818D0E8FD009B354C /* BZAppDelegate.m in Sources */,
+				6ED1CC33195EC1AC007BF42B /* BZUserInfo+Utils.m in Sources */,
 				F147040418D70D870027F848 /* BZUserInfo.m in Sources */,
+				6ED1CC32195EC1AC007BF42B /* BZUser+Utils.m in Sources */,
 				F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */,
 				E59FBBF318D44398009B354C /* BZViewController.m in Sources */,
-				E5831C3E18C52AF600D5272B /* BZWebServiceClient.m in Sources */,
 				F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */,
 				F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
+				6ED1CC20195EC165007BF42B /* BZWebServiceClient.m in Sources */,
 				E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */,
-				E53376B418E6DBEE00559857 /* BZProductController.m in Sources */,
-				E53376B718E6DF3100559857 /* BZBugController.m in Sources */,
-				E59FBBEF18D0ECBD009B354C /* BZLoginController.m in Sources */,
-				F1AAFDB31901595E000AADB1 /* BZBugs+Utils.m in Sources */,
 				F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */,
-				F1AAFDB619015972000AADB1 /* BZBugInfo+Utils.m in Sources */,
-				F14703EB18D5BB6A0027F848 /* BZUser+Utils.m in Sources */,
 				F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */,
 				F14703E718D5B1DD0027F848 /* BZUser.m in Sources */,
 				F1AAFDAD19015758000AADB1 /* BZProducts.m in Sources */,
-				E5831C4418C52B5500D5272B /* BZServiceResult.m in Sources */,
+				6ED1CC0A195EC165007BF42B /* BZAppDelegate.m in Sources */,
+				6ED1CC0C195EC165007BF42B /* BZLoginController.m in Sources */,
 				E55264AF18C51C8A00721917 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

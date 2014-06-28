@@ -16,44 +16,18 @@
         inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext{
     
     if(![userData count]) return nil;
-    
     NSString* userLoginId = [NSString stringWithFormat:@"%@", userData[@"login"]];
     
-    // Get the Already existing data
-    BZUser *user = nil;
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"BZUser"];
-    if(!BZIsEmpty(userLoginId)){
-        request.predicate   = [NSPredicate predicateWithFormat:@"login = %@",userLoginId];
-    }
     
-    NSError* error = nil;
-    NSArray *fetchResults = [[NSArray alloc] init];
-    fetchResults = [managedObjectContext executeFetchRequest:request error:&error] ;
+    NSPredicate* predicate   = [NSPredicate predicateWithFormat:@"login = %@",userLoginId];
+    BZUser *user = (BZUser*)[NSManagedObject getManagedObjectContextForEntity:@"BZUser" withPredicate:predicate];
     
-    //NSLog(@"DB Error : %@",error );
-    
-    // Case 1:
-    // If Error occurs
-    if(!fetchResults || [fetchResults count] > 1){
-        // handle the error
-    }
-    // Case 2:
-    // If the user doesn't Exist
-    else if(![fetchResults count]){
-        user = (BZUser *)[NSEntityDescription insertNewObjectForEntityForName:@"BZUser"
-                                                     inManagedObjectContext:managedObjectContext];
-        
+        NSError* error = nil;
         [user setLogin:userData[@"login"]];
         [user setPassword:userData[@"password"]];
         [user setRemember:userData[@"remeber"]];
+        [managedObjectContext save:&error];
 
-    }
-    // Case 3:
-    // If the user Exists
-    else {
-        
-        user = [fetchResults lastObject];
-    }
     return user;
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.15" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="BZBugInfo" representedClassName="BZBugInfo" syncable="YES">
         <relationship name="bugId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugs" inverseName="bugDetails" inverseEntity="BZBugs" syncable="YES"/>
     </entity>
@@ -17,24 +17,28 @@
         <relationship name="bugDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugInfo" inverseName="bugId" inverseEntity="BZBugInfo" syncable="YES"/>
         <relationship name="hasUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUser" inverseName="hasBug" inverseEntity="BZUser" syncable="YES"/>
     </entity>
-    <entity name="BZProducts" representedClassName="BZProducts" syncable="YES">
+    <entity name="BZComponents" representedClassName="BZComponents" syncable="YES">
         <attribute name="comp_default_assigned_to" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="comp_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="comp_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="comp_is_active" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="comp_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ofProduct" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZProducts" inverseName="hasComponents" inverseEntity="BZProducts" syncable="YES"/>
+    </entity>
+    <entity name="BZProducts" representedClassName="BZProducts" syncable="YES">
         <attribute name="is_active" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prod_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="hasComponents" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="BZComponents" inverseName="ofProduct" inverseEntity="BZComponents" syncable="YES"/>
         <relationship name="hasUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUser" inverseName="hasProducts" inverseEntity="BZUser" syncable="YES"/>
     </entity>
     <entity name="BZUser" representedClassName="BZUser" syncable="YES">
         <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remember" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="hasBug" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZBugs" inverseName="hasUser" inverseEntity="BZBugs" syncable="YES"/>
-        <relationship name="hasProducts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZProducts" inverseName="hasUser" inverseEntity="BZProducts" syncable="YES"/>
+        <relationship name="hasBug" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="BZBugs" inverseName="hasUser" inverseEntity="BZBugs" syncable="YES"/>
+        <relationship name="hasProducts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BZProducts" inverseName="hasUser" inverseEntity="BZProducts" syncable="YES"/>
         <relationship name="userInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BZUserInfo" inverseName="hasUser" inverseEntity="BZUserInfo" syncable="YES"/>
     </entity>
     <entity name="BZUserInfo" representedClassName="BZUserInfo" syncable="YES">
@@ -52,8 +56,9 @@
     <elements>
         <element name="BZBugInfo" positionX="-54" positionY="144" width="128" height="58"/>
         <element name="BZBugs" positionX="-63" positionY="81" width="128" height="223"/>
-        <element name="BZProducts" positionX="-36" positionY="135" width="128" height="193"/>
-        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="BZComponents" positionX="-54" positionY="135" width="128" height="133"/>
+        <element name="BZProducts" positionX="-36" positionY="135" width="128" height="135"/>
+        <element name="BZUser" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="BZUserInfo" positionX="-54" positionY="18" width="128" height="193"/>
     </elements>
 </model>

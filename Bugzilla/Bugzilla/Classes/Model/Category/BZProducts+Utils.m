@@ -7,6 +7,7 @@
 //
 
 #import "BZProducts+Utils.h"
+#import "BZComponents.h"
 
 @implementation BZProducts (Utils)
 
@@ -14,64 +15,51 @@
       inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext forUser:(BZUser*)currentUser{
     
     
-//    if(![userData count]) return nil;
-//    
-//   // NSString* userLoginId = [NSString stringWithFormat:@"%@", userData[@"login"]];
-//    
-//    // Get the Already existing data
-//    BZProducts *products = nil;
-//    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"BZProducts"];
-//    if(!BZIsEmpty(products.product_id)){
-//        request.predicate   = [NSPredicate predicateWithFormat:@"product_id = %@",products.product_id];
-//    }
-//    
-//    NSError* error = nil;
-//    NSArray *fetchResults = [[NSArray alloc] init];
-//    fetchResults = [managedObjectContext executeFetchRequest:request error:&error] ;
-//    
-//    //NSLog(@"DB Error : %@",error );
-//    
-//    // Case 1:
-//    // If Error occurs
-//    if(!fetchResults || [fetchResults count] > 1){
-//        // handle the error
-//    }
-//    
-//    // Case 2:
-//    // If the user doesn't Exist
-//    else if(![fetchResults count]){
-//        products = (BZProducts *)[NSEntityDescription insertNewObjectForEntityForName:@"BZProducts"
-//                                                       inManagedObjectContext:managedObjectContext];
-//        
-//        for (id productsList in userData) {
-//            
-////            ;
-////            ;
-////            setComp_id;
-////            setComp_is_active;
-////            setComp_name;
-////            setIs_active;
-////            setName;
-////            setProd_description;
-////            setProduct_id;
-////            setHasUser;
-//            
-//            
-//            [products setComp_default_assigned_to:productsList[@"login"]];
-//            [products setComp_description:productsList[@"password"]];
-//           // [products setRemember:productsList[@"remeber"]];
-//        }
-//        
-//    }
-//    // Case 3:
-//    // If the user Exists
-//    else {
-//        
-//        user = [fetchResults lastObject];
-//    }
-//    return user;
-//    
-    return nil;
+    if(![userData count]) return nil;
+
+    NSPredicate * predicateProduct = nil;
+    BZProducts *products = nil;
+    NSError *error = nil;
+    
+    BZComponents *components;
+    NSArray *productKeys = [userData allKeys];
+    NSDictionary* productDict = [[userData valueForKey:@"products"] lastObject];
+    for (NSString* keyName in productKeys) {
+        
+        if(!BZIsEmpty(productDict[@"id"])){
+            predicateProduct   = [NSPredicate predicateWithFormat:@"product_id = %@",productDict[@"id"]];
+        }
+
+        products =     (BZProducts*)[NSManagedObject getManagedObjectContextForEntity:@"BZProducts" withPredicate:predicateProduct];
+        
+        if([keyName isEqualToString:@"products"]){
+            NSArray *componentArr = [productDict count]?[productDict valueForKey:@"components"] :nil;
+            
+            [products setIs_active:productDict[@"is_active"]];
+            [products setName:productDict[@"name"]];
+            [products setProd_description:productDict[@"description"]];
+            [products setProduct_id:productDict[@"id"]];
+            [products setHasUser:currentUser];
+            
+            for (NSDictionary* compData in componentArr) {
+                
+                NSPredicate * predicateComponent = [NSPredicate predicateWithFormat:@"comp_id = %@",compData[@"id"]];
+                components =     (BZComponents*)[NSManagedObject getManagedObjectContextForEntity:@"BZComponents" withPredicate:predicateComponent];
+                [components setComp_default_assigned_to:compData[@"default_assigned_to"]];
+                [components setComp_description:compData[@"description"]];
+                [components setComp_id:compData[@"id"]];
+                [components setComp_is_active:compData[@"is_active"]];
+                [components setComp_name:compData[@"name"]];
+                [components setOfProduct:products];
+
+            }
+
+        }
+        [managedObjectContext save:&error];
+    }
+
+    return products;
+
 }
 +(NSArray *) getProducts:(NSManagedObjectContext*) managedObjectContext fforUser:(BZUser*)currentUser{
     return nil;

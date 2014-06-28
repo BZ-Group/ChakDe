@@ -10,4 +10,6 @@
 
 @interface NSManagedObject (Utils)
 
++(NSManagedObject*)getManagedObjectContextForEntity:(NSString*)entityName withPredicate:(NSPredicate*)predicate;
+
 @end
