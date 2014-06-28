@@ -40,7 +40,7 @@
             [products setProd_description:productDict[@"description"]];
             [products setProduct_id:productDict[@"id"]];
             [products setHasUser:currentUser];
-            
+            NSMutableArray *componentSet = [NSMutableArray array];
             for (NSDictionary* compData in componentArr) {
                 
                 NSPredicate * predicateComponent = [NSPredicate predicateWithFormat:@"comp_id = %@",compData[@"id"]];
@@ -51,8 +51,13 @@
                 [components setComp_is_active:compData[@"is_active"]];
                 [components setComp_name:compData[@"name"]];
                 [components setOfProduct:products];
+                [componentSet addObject:components];
+                //[products addHasComponentsObject:components];
 
             }
+            NSOrderedSet *orderedSet = [[NSOrderedSet alloc] initWithArray:componentSet];
+            if([orderedSet count])
+                [products setHasComponents:orderedSet];
 
         }
         [managedObjectContext save:&error];
