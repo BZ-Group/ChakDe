@@ -27,6 +27,7 @@
     [fetchRequest setReturnsObjectsAsFaults:NO];
     [fetchRequest setReturnsDistinctResults:YES];
     [fetchRequest setIncludesPendingChanges:YES];
+    [fetchRequest setFetchBatchSize:20];
     
     NSError *error = nil;
     NSArray *fetchResults = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];

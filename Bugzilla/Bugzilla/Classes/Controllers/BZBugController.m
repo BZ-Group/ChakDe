@@ -8,7 +8,7 @@
 
 #import "BZBugController.h"
 #import "BZWebServiceClient.h"
-
+#import "BZbugs+Utils.h"
 
 @implementation BZBugController
 
@@ -113,7 +113,7 @@ static BZWebServiceClient *client;
                       
                       if (result.success)
                       {
-                          
+                          [BZBugs saveBugs:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:appDelegate.currentUser];
                           // callback
                           completion(result.success, result.errorCode);
                           

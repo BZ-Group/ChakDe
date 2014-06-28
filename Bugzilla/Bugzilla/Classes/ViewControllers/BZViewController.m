@@ -141,7 +141,7 @@
 {
     //Get Bugs
     BZBugController *bzBugController = [BZBugController sharedInstance];
-    [bzBugController getBugDetailForBugIds:@[@23830,@23943]
+    [bzBugController getBugDetailForBugIds:@[@8800,@8341]
                             withCompletion:^(BOOL success, NSInteger errorCode)
      {
          if (success)

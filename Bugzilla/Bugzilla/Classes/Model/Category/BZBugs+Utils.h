@@ -10,7 +10,7 @@
 
 @interface BZBugs (Utils)
 
-+(BZBugs *) saveBugs : (NSDictionary*)userData
++(NSArray *) saveBugs : (NSDictionary*)userData
          inManagedObjectContext : (NSManagedObjectContext*) managedObjectContext forUser:(BZUser*)currentUser;
 
 +(NSArray *) getBugs:(NSManagedObjectContext*) managedObjectContext forUser:(NSString*)userID;
