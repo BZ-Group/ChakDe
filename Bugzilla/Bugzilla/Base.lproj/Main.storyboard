@@ -21,7 +21,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LCQ-WK-Zj4"/>
-                                    <segue destination="JSy-cb-F92" kind="modal" id="eDg-fq-TJp"/>
+                                    <segue destination="JSy-cb-F92" kind="modal" id="zg3-hX-iNM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjU-xa-82F">

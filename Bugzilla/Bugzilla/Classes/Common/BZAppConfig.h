@@ -24,5 +24,10 @@ static NSString * const BZServiceBugSearch                = @"Bug.search";
 static NSString * const BZServiceBugDetails               = @"Bug.get";
 
 
+// Consts
+static NSInteger  const BZServiceBugsTimeRange            = 60*60*24*30;
+static NSString * const BZGTMDateFormat                   = @"yyyy-MM-dd HH:mm:ss+0000";
+
+
 
 #endif

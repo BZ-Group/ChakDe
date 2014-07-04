@@ -26,10 +26,13 @@
 #import "UIViewController+ECSlidingViewController.h"
 #import "MEDynamicTransition.h"
 #import "METransitions.h"
+#import "BZBugController.h"
+#import "BZBugs.h"
 
 @interface METransitionsViewController ()
 @property (nonatomic, strong) METransitions *transitions;
 @property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
+@property (nonatomic, strong) NSArray *bugsArray;
 @end
 
 @implementation METransitionsViewController
@@ -41,12 +44,45 @@
 
     self.clearsSelectionOnViewWillAppear = NO;
     
+    NSDictionary *transitionData = self.transitions.selectedTransition;
+    id<ECSlidingViewControllerDelegate> transition = transitionData[@"transition"];
+    self.slidingViewController.delegate = transition;
     self.transitions.dynamicTransition.slidingViewController = self.slidingViewController;
+    [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"TransitionCell"];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView selectRowAtIndexPath:defaultIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     });
+
+    self.bugsArray = [appDelegate.currentUser.hasBug array];
+    BZBugController *bzBugController = [BZBugController sharedInstance];
+    NSString* lastSaveTime = [bzBugController lastBugSaveTime];
+    [bzBugController getBugForAssignedTo:nil
+                               Component:nil
+                            CreationTime:nil
+                                 Creator:nil
+                                      Id:nil  //23830 //23943
+                          LastChangeTime:lastSaveTime //@"2014-03-25 14:08:00 +0000"
+                                   Limit:nil
+                                Priority:nil
+                                 Product:nil
+                                Severity:nil
+                                  Status:nil
+                                 Summary:nil
+                          withCompletion:^(BOOL success, NSInteger errorCode)
+     {
+         if (success)
+         {
+             self.bugsArray = bzBugController.bugsArr;
+             [self.tableView reloadData];
+             //NSLog(@"Success");
+         }
+         else
+         {
+             NSLog(@"Fail");
+         }
+     }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -76,17 +112,21 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.transitions.all.count;
+//    return self.transitions.selectedTransition.count;
+    return self.bugsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"TransitionCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSString *transition = self.transitions.all[indexPath.row][@"name"];
-    
-    cell.textLabel.text = transition;
-    
+    if(!cell){
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    if([self.bugsArray count]){
+        BZBugs *bugsData = [self.bugsArray bzObjectAtIndex:indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",bugsData.bug_id];
+    }
     return cell;
 }
 

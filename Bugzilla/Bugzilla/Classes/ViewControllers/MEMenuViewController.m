@@ -49,6 +49,7 @@ NSString *const BZMenuItemSettings = @"Settings";
     // It is initially set as a User Defined Runtime Attributes in storyboards.
     // We keep a reference to this instance so that we can go back to it without losing its state.
     self.transitionsNavigationController = (UINavigationController *)self.slidingViewController.topViewController;
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

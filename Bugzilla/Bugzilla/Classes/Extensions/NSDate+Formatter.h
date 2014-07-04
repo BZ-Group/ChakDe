@@ -10,6 +10,9 @@
 
 @interface NSDate (Formatter)
 
+
+//static NSString * const BZServiceVersionURI               = @"Bugzilla.version";
+
 + (NSDateFormatter *)dateFormatterWithString:(NSString *)string;
 + (NSString *)currentDateStringWithFormat:(NSString *)dateFormat;
 + (NSString *)stringFromDate:(NSDate *)date andFormat:(NSString *)dateFormat;

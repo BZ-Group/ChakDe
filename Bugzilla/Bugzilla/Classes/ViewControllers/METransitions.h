@@ -41,5 +41,5 @@ FOUNDATION_EXPORT NSString *const METransitionNameDynamic;
 @property (nonatomic, strong) MEZoomAnimationController *zoomAnimationController;
 @property (nonatomic, strong) MEDynamicTransition *dynamicTransition;
 @property (nonatomic, strong, readonly) NSArray *all;
-@property (nonatomic, strong, readonly) NSDictionary* selectedTransition;;
+@property (nonatomic, strong, readonly) NSDictionary* selectedTransition;
 @end

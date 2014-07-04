@@ -15,6 +15,7 @@
 		6E1B6AB61966F1DC00CCA766 /* MEDynamicTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAD1966F1DC00CCA766 /* MEDynamicTransition.m */; };
 		6E1B6AB71966F1DC00CCA766 /* MEFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAF1966F1DC00CCA766 /* MEFoldAnimationController.m */; };
 		6E1B6AB81966F1DC00CCA766 /* MEZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AB11966F1DC00CCA766 /* MEZoomAnimationController.m */; };
+		6E1B6ABD1967433500CCA766 /* NSArray+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6ABC1967433500CCA766 /* NSArray+Utilities.m */; };
 		6ED1CC0A195EC165007BF42B /* BZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */; };
 		6ED1CC0B195EC165007BF42B /* BZBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD4195EC165007BF42B /* BZBugController.m */; };
 		6ED1CC0C195EC165007BF42B /* BZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD6195EC165007BF42B /* BZLoginController.m */; };
@@ -79,6 +80,8 @@
 		6E1B6AAF1966F1DC00CCA766 /* MEFoldAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFoldAnimationController.m; sourceTree = "<group>"; };
 		6E1B6AB01966F1DC00CCA766 /* MEZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEZoomAnimationController.h; sourceTree = "<group>"; };
 		6E1B6AB11966F1DC00CCA766 /* MEZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEZoomAnimationController.m; sourceTree = "<group>"; };
+		6E1B6ABB1967433500CCA766 /* NSArray+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utilities.h"; sourceTree = "<group>"; };
+		6E1B6ABC1967433500CCA766 /* NSArray+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utilities.m"; sourceTree = "<group>"; };
 		6ED1CBD0195EC165007BF42B /* BZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAppDelegate.h; sourceTree = "<group>"; };
 		6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppDelegate.m; sourceTree = "<group>"; };
 		6ED1CBD3195EC165007BF42B /* BZBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugController.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 		E5831C3018C5261900D5272B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6E1B6ABB1967433500CCA766 /* NSArray+Utilities.h */,
+				6E1B6ABC1967433500CCA766 /* NSArray+Utilities.m */,
 				E5831C4818C5327D00D5272B /* NSDate+Formatter.h */,
 				E5831C4918C5327D00D5272B /* NSDate+Formatter.m */,
 				E5831C4A18C5327D00D5272B /* NSString+Email.h */,
@@ -560,6 +565,7 @@
 			files = (
 				6ED1CC1F195EC165007BF42B /* BZServiceResult.m in Sources */,
 				6ED1CC2E195EC1AC007BF42B /* BZComponents.m in Sources */,
+				6E1B6ABD1967433500CCA766 /* NSArray+Utilities.m in Sources */,
 				6ED1CC0B195EC165007BF42B /* BZBugController.m in Sources */,
 				6ED1CC0D195EC165007BF42B /* BZProductController.m in Sources */,
 				6ED1CC2F195EC1AC007BF42B /* BZBugInfo+Utils.m in Sources */,

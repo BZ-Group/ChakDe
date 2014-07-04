@@ -12,6 +12,10 @@
 typedef void (^BZParseManagerCompletion)(BOOL success, NSInteger errorCode);
 
 @interface BZBugController : NSObject
+{
+    NSArray* _bugsArr;
+}
+@property (nonatomic, strong, readonly) NSArray* bugsArr;
 
 +(BZBugController *)sharedInstance;
 
@@ -32,5 +36,5 @@ typedef void (^BZParseManagerCompletion)(BOOL success, NSInteger errorCode);
 -(void)getBugDetailForBugIds:(NSArray *)bugIds
               withCompletion:(BZParseManagerCompletion)completion;
 
-
+-(NSString*) lastBugSaveTime;
 @end

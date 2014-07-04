@@ -9,6 +9,7 @@
 #import "BZBugController.h"
 #import "BZWebServiceClient.h"
 #import "BZbugs+Utils.h"
+#import "NSDate+Formatter.h"
 
 @implementation BZBugController
 
@@ -27,6 +28,12 @@ static BZWebServiceClient *client;
 	return _sharedInstance;
 }
 
+-(NSArray*) bugsArr{
+    if(!_bugsArr){
+        _bugsArr = [NSArray array];
+    }
+    return _bugsArr;
+}
 
 -(void)getBugForAssignedTo:(NSString *)assignedTo
                  Component:(NSString *)component
@@ -113,7 +120,7 @@ static BZWebServiceClient *client;
                       
                       if (result.success)
                       {
-                          [BZBugs saveBugs:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:appDelegate.currentUser];
+                          _bugsArr = [BZBugs saveBugs:result.result inManagedObjectContext:appDelegate.managedObjectContext forUser:appDelegate.currentUser];
                           // callback
                           completion(result.success, result.errorCode);
                           
@@ -150,6 +157,17 @@ static BZWebServiceClient *client;
                       }
                   }
      ];
+}
+
+
+-(NSString*) lastBugSaveTime{
+    NSUserDefaults *bugLastTime = [[NSUserDefaults standardUserDefaults] valueForKey:[NSString stringWithFormat:@"bugLastTime-%@",appDelegate.currentUser.login]];
+    NSString *dateString;
+    if(!bugLastTime){
+        NSDate* defaultDate = [NSDate dateWithTimeIntervalSinceNow:-BZServiceBugsTimeRange];
+        dateString = [NSDate stringFromDate:defaultDate andFormat:BZGTMDateFormat];
+    }
+    return dateString;
 }
 
 @end

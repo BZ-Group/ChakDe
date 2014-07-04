@@ -17,4 +17,5 @@
     #import "BZAppConfig.h"
     #import "BZCommonMacros.h"
 #import "NSManagedObject+Utils.h"
+#import "NSArray+Utilities.h"
 #endif
