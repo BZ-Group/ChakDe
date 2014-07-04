@@ -34,13 +34,11 @@
 		E55264CE18C51C8A00721917 /* BugzillaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55264CD18C51C8A00721917 /* BugzillaTests.m */; };
 		E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4918C5327D00D5272B /* NSDate+Formatter.m */; };
 		E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C4B18C5327D00D5272B /* NSString+Email.m */; };
-		E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5831C5218C5331200D5272B /* BZDeleteThisControl.m */; };
 		E5831C5918C533D200D5272B /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5831C5818C533D200D5272B /* bg.png */; };
 		E59FBBF318D44398009B354C /* BZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E59FBBF218D44398009B354C /* BZViewController.m */; };
 		F14703E718D5B1DD0027F848 /* BZUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703E618D5B1DD0027F848 /* BZUser.m */; };
 		F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F14703F418D6ADE20027F848 /* NSManagedObject+Utils.m */; };
 		F147040418D70D870027F848 /* BZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F147040318D70D870027F848 /* BZUserInfo.m */; };
-		F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F147041D18D7FDCA0027F848 /* BZDBManager.m */; };
 		F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA319015676000AADB1 /* BZBugInfo.m */; };
 		F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDA519015676000AADB1 /* BZBugs.m */; };
 		F1AAFDAD19015758000AADB1 /* BZProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AAFDAC19015758000AADB1 /* BZProducts.m */; };
@@ -106,8 +104,6 @@
 		E5831C4918C5327D00D5272B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		E5831C4A18C5327D00D5272B /* NSString+Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Email.h"; sourceTree = "<group>"; };
 		E5831C4B18C5327D00D5272B /* NSString+Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Email.m"; sourceTree = "<group>"; };
-		E5831C5118C5331200D5272B /* BZDeleteThisControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDeleteThisControl.h; sourceTree = "<group>"; };
-		E5831C5218C5331200D5272B /* BZDeleteThisControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDeleteThisControl.m; sourceTree = "<group>"; };
 		E5831C5818C533D200D5272B /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E59FBBF118D44398009B354C /* BZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZViewController.h; sourceTree = "<group>"; };
 		E59FBBF218D44398009B354C /* BZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZViewController.m; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 		F14703F418D6ADE20027F848 /* NSManagedObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Utils.m"; sourceTree = "<group>"; };
 		F147040218D70D870027F848 /* BZUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZUserInfo.h; sourceTree = "<group>"; };
 		F147040318D70D870027F848 /* BZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZUserInfo.m; sourceTree = "<group>"; };
-		F147041C18D7FDCA0027F848 /* BZDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDBManager.h; sourceTree = "<group>"; };
-		F147041D18D7FDCA0027F848 /* BZDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDBManager.m; sourceTree = "<group>"; };
 		F1AAFDA219015676000AADB1 /* BZBugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugInfo.h; sourceTree = "<group>"; };
 		F1AAFDA319015676000AADB1 /* BZBugInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugInfo.m; sourceTree = "<group>"; };
 		F1AAFDA419015676000AADB1 /* BZBugs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugs.h; sourceTree = "<group>"; };
@@ -284,15 +278,12 @@
 			isa = PBXGroup;
 			children = (
 				6ED1CBCF195EC165007BF42B /* AppDelegate */,
-				6ED1CBD2195EC165007BF42B /* Controllers */,
-				6ED1CC05195EC165007BF42B /* WSManager */,
-				F147041B18D7FDAC0027F848 /* DBManager */,
-				E59FBBF018D44398009B354C /* ViewControllers */,
 				E5831C2B18C5261900D5272B /* Common */,
-				E5831C2F18C5261900D5272B /* Controls */,
 				E5831C3018C5261900D5272B /* Extensions */,
+				6ED1CC05195EC165007BF42B /* WSManager */,
 				E5831C3218C5261900D5272B /* Model */,
-				E5831C3318C5261900D5272B /* Parser */,
+				E59FBBF018D44398009B354C /* ViewControllers */,
+				6ED1CBD2195EC165007BF42B /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -305,15 +296,6 @@
 				F14703F118D6A78B0027F848 /* BZAppConfig.h */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		E5831C2F18C5261900D5272B /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				E5831C5118C5331200D5272B /* BZDeleteThisControl.h */,
-				E5831C5218C5331200D5272B /* BZDeleteThisControl.m */,
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 		E5831C3018C5261900D5272B /* Extensions */ = {
@@ -347,13 +329,6 @@
 				F14703E618D5B1DD0027F848 /* BZUser.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E5831C3318C5261900D5272B /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Parser;
 			sourceTree = "<group>";
 		};
 		E5831C3518C5261900D5272B /* Resources */ = {
@@ -396,15 +371,6 @@
 				E59FBBF218D44398009B354C /* BZViewController.m */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F147041B18D7FDAC0027F848 /* DBManager */ = {
-			isa = PBXGroup;
-			children = (
-				F147041C18D7FDCA0027F848 /* BZDBManager.h */,
-				F147041D18D7FDCA0027F848 /* BZDBManager.m */,
-			);
-			path = DBManager;
 			sourceTree = "<group>";
 		};
 		F1C304FD18CF4CD9001BFC50 /* Database */ = {
@@ -556,13 +522,11 @@
 				6ED1CC2F195EC1AC007BF42B /* BZBugInfo+Utils.m in Sources */,
 				6ED1CC31195EC1AC007BF42B /* BZProducts+Utils.m in Sources */,
 				6ED1CC30195EC1AC007BF42B /* BZBugs+Utils.m in Sources */,
-				E5831C5318C5331200D5272B /* BZDeleteThisControl.m in Sources */,
 				6ED1CC33195EC1AC007BF42B /* BZUserInfo+Utils.m in Sources */,
 				F147040418D70D870027F848 /* BZUserInfo.m in Sources */,
 				6ED1CC32195EC1AC007BF42B /* BZUser+Utils.m in Sources */,
 				F1AAFDA719015676000AADB1 /* BZBugs.m in Sources */,
 				E59FBBF318D44398009B354C /* BZViewController.m in Sources */,
-				F147041E18D7FDCA0027F848 /* BZDBManager.m in Sources */,
 				F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				6ED1CC20195EC165007BF42B /* BZWebServiceClient.m in Sources */,
