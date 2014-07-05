@@ -8,8 +8,7 @@
 
 #import "BZBugController.h"
 #import "BZWebServiceClient.h"
-#import "BZbugs+Utils.h"
-#import "NSDate+Formatter.h"
+
 
 @implementation BZBugController
 
@@ -162,10 +161,11 @@ static BZWebServiceClient *client;
 
 -(NSString*) lastBugSaveTime{
     NSUserDefaults *bugLastTime = [[NSUserDefaults standardUserDefaults] valueForKey:[NSString stringWithFormat:@"bugLastTime-%@",appDelegate.currentUser.login]];
-    NSString *dateString;
+    NSString *dateString = (NSString*)bugLastTime;
     if(!bugLastTime){
         NSDate* defaultDate = [NSDate dateWithTimeIntervalSinceNow:-BZServiceBugsTimeRange];
         dateString = [NSDate stringFromDate:defaultDate andFormat:BZGTMDateFormat];
+        
     }
     return dateString;
 }

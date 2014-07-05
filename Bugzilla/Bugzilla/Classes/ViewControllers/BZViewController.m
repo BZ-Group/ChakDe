@@ -10,7 +10,8 @@
 #import "BZLoginController.h"
 #import "BZProductController.h"
 #import "BZBugController.h"
-#import "MESettingsViewController.h"
+#import "BZAccountController.h"
+#import "BZBugListViewController.h"
 
 @interface BZViewController ()
 
@@ -62,9 +63,12 @@
      {
          if (success)
          {
-//             MESettingsViewController *mainVC = [[MESettingsViewController alloc] init];
-//             [self  presentViewController:mainVC animated:YES completion:NULL];
              NSLog(@"Success");
+             
+             BZBugListViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ECSlidingViewController"];
+             
+             [self presentViewController:lvc animated:YES completion:NULL];
+
          }
          else
          {

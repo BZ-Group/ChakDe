@@ -20,7 +20,7 @@
     
     
     NSPredicate* predicate   = [NSPredicate predicateWithFormat:@"login = %@",userLoginId];
-    BZUser *user = (BZUser*)[NSManagedObject getManagedObjectContextForEntity:@"BZUser" withPredicate:predicate];
+    BZUser *user = (BZUser*)[NSManagedObject getManagedObjectForEntity:@"BZUser" withPredicate:predicate];
     
         NSError* error = nil;
         [user setLogin:userData[@"login"]];

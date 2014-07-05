@@ -18,4 +18,6 @@
     #import "BZCommonMacros.h"
 #import "NSManagedObject+Utils.h"
 #import "NSArray+Utilities.h"
+#import "BZbugs+Utils.h"
+#import "NSDate+Formatter.h"
 #endif

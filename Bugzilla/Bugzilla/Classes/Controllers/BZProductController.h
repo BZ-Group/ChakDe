@@ -15,7 +15,7 @@ typedef void (^BZParseManagerCompletion)(BOOL success, NSInteger errorCode);
 
 +(BZProductController *)sharedInstance;
 
--(void) getSelectableProductIdsWithCompletion   :(BZParseManagerCompletion)completion;
+//-(void) getSelectableProductIdsWithCompletion   :(BZParseManagerCompletion)completion;
 -(void) getEnterableProductIdsWithCompletion    :(BZParseManagerCompletion)completion;
 -(void) getAccessibleProductIdsWithCompletion   :(BZParseManagerCompletion)completion;
 

@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3BFA112E413F4792B4915386 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED39A841ED4ABAB64929C4 /* libPods.a */; };
-		6E1B6AB21966F1DC00CCA766 /* MEMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA41966F1DC00CCA766 /* MEMenuViewController.m */; };
-		6E1B6AB31966F1DC00CCA766 /* MESettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA61966F1DC00CCA766 /* MESettingsViewController.m */; };
-		6E1B6AB41966F1DC00CCA766 /* METransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA81966F1DC00CCA766 /* METransitions.m */; };
-		6E1B6AB51966F1DC00CCA766 /* METransitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAA1966F1DC00CCA766 /* METransitionsViewController.m */; };
+		6E1B6AB21966F1DC00CCA766 /* BZLeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA41966F1DC00CCA766 /* BZLeftMenuController.m */; };
+		6E1B6AB31966F1DC00CCA766 /* BZAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA61966F1DC00CCA766 /* BZAccountController.m */; };
+		6E1B6AB41966F1DC00CCA766 /* BZTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AA81966F1DC00CCA766 /* BZTransitions.m */; };
+		6E1B6AB51966F1DC00CCA766 /* BZBugListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAA1966F1DC00CCA766 /* BZBugListViewController.m */; };
 		6E1B6AB61966F1DC00CCA766 /* MEDynamicTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAD1966F1DC00CCA766 /* MEDynamicTransition.m */; };
 		6E1B6AB71966F1DC00CCA766 /* MEFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AAF1966F1DC00CCA766 /* MEFoldAnimationController.m */; };
 		6E1B6AB81966F1DC00CCA766 /* MEZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AB11966F1DC00CCA766 /* MEZoomAnimationController.m */; };
 		6E1B6ABD1967433500CCA766 /* NSArray+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6ABC1967433500CCA766 /* NSArray+Utilities.m */; };
+		6E1B6AC2196836D000CCA766 /* BZBugDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B6AC1196836D000CCA766 /* BZBugDetailsViewController.m */; };
 		6ED1CC0A195EC165007BF42B /* BZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */; };
 		6ED1CC0B195EC165007BF42B /* BZBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD4195EC165007BF42B /* BZBugController.m */; };
 		6ED1CC0C195EC165007BF42B /* BZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1CBD6195EC165007BF42B /* BZLoginController.m */; };
@@ -66,14 +67,14 @@
 
 /* Begin PBXFileReference section */
 		00851FCEFC5942C5A4B29F37 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		6E1B6AA31966F1DC00CCA766 /* MEMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMenuViewController.h; sourceTree = "<group>"; };
-		6E1B6AA41966F1DC00CCA766 /* MEMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMenuViewController.m; sourceTree = "<group>"; };
-		6E1B6AA51966F1DC00CCA766 /* MESettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESettingsViewController.h; sourceTree = "<group>"; };
-		6E1B6AA61966F1DC00CCA766 /* MESettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESettingsViewController.m; sourceTree = "<group>"; };
-		6E1B6AA71966F1DC00CCA766 /* METransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METransitions.h; sourceTree = "<group>"; };
-		6E1B6AA81966F1DC00CCA766 /* METransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METransitions.m; sourceTree = "<group>"; };
-		6E1B6AA91966F1DC00CCA766 /* METransitionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = METransitionsViewController.h; sourceTree = "<group>"; };
-		6E1B6AAA1966F1DC00CCA766 /* METransitionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = METransitionsViewController.m; sourceTree = "<group>"; };
+		6E1B6AA31966F1DC00CCA766 /* BZLeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZLeftMenuController.h; sourceTree = "<group>"; };
+		6E1B6AA41966F1DC00CCA766 /* BZLeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZLeftMenuController.m; sourceTree = "<group>"; };
+		6E1B6AA51966F1DC00CCA766 /* BZAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAccountController.h; sourceTree = "<group>"; };
+		6E1B6AA61966F1DC00CCA766 /* BZAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAccountController.m; sourceTree = "<group>"; };
+		6E1B6AA71966F1DC00CCA766 /* BZTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZTransitions.h; sourceTree = "<group>"; };
+		6E1B6AA81966F1DC00CCA766 /* BZTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZTransitions.m; sourceTree = "<group>"; };
+		6E1B6AA91966F1DC00CCA766 /* BZBugListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugListViewController.h; sourceTree = "<group>"; };
+		6E1B6AAA1966F1DC00CCA766 /* BZBugListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugListViewController.m; sourceTree = "<group>"; };
 		6E1B6AAC1966F1DC00CCA766 /* MEDynamicTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDynamicTransition.h; sourceTree = "<group>"; };
 		6E1B6AAD1966F1DC00CCA766 /* MEDynamicTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDynamicTransition.m; sourceTree = "<group>"; };
 		6E1B6AAE1966F1DC00CCA766 /* MEFoldAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFoldAnimationController.h; sourceTree = "<group>"; };
@@ -82,6 +83,8 @@
 		6E1B6AB11966F1DC00CCA766 /* MEZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEZoomAnimationController.m; sourceTree = "<group>"; };
 		6E1B6ABB1967433500CCA766 /* NSArray+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utilities.h"; sourceTree = "<group>"; };
 		6E1B6ABC1967433500CCA766 /* NSArray+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utilities.m"; sourceTree = "<group>"; };
+		6E1B6AC0196836D000CCA766 /* BZBugDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugDetailsViewController.h; sourceTree = "<group>"; };
+		6E1B6AC1196836D000CCA766 /* BZBugDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZBugDetailsViewController.m; sourceTree = "<group>"; };
 		6ED1CBD0195EC165007BF42B /* BZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAppDelegate.h; sourceTree = "<group>"; };
 		6ED1CBD1195EC165007BF42B /* BZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppDelegate.m; sourceTree = "<group>"; };
 		6ED1CBD3195EC165007BF42B /* BZBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZBugController.h; sourceTree = "<group>"; };
@@ -407,14 +410,16 @@
 			isa = PBXGroup;
 			children = (
 				6E1B6AAB1966F1DC00CCA766 /* Transitions */,
-				6E1B6AA31966F1DC00CCA766 /* MEMenuViewController.h */,
-				6E1B6AA41966F1DC00CCA766 /* MEMenuViewController.m */,
-				6E1B6AA51966F1DC00CCA766 /* MESettingsViewController.h */,
-				6E1B6AA61966F1DC00CCA766 /* MESettingsViewController.m */,
-				6E1B6AA71966F1DC00CCA766 /* METransitions.h */,
-				6E1B6AA81966F1DC00CCA766 /* METransitions.m */,
-				6E1B6AA91966F1DC00CCA766 /* METransitionsViewController.h */,
-				6E1B6AAA1966F1DC00CCA766 /* METransitionsViewController.m */,
+				6E1B6AC0196836D000CCA766 /* BZBugDetailsViewController.h */,
+				6E1B6AC1196836D000CCA766 /* BZBugDetailsViewController.m */,
+				6E1B6AA31966F1DC00CCA766 /* BZLeftMenuController.h */,
+				6E1B6AA41966F1DC00CCA766 /* BZLeftMenuController.m */,
+				6E1B6AA51966F1DC00CCA766 /* BZAccountController.h */,
+				6E1B6AA61966F1DC00CCA766 /* BZAccountController.m */,
+				6E1B6AA71966F1DC00CCA766 /* BZTransitions.h */,
+				6E1B6AA81966F1DC00CCA766 /* BZTransitions.m */,
+				6E1B6AA91966F1DC00CCA766 /* BZBugListViewController.h */,
+				6E1B6AAA1966F1DC00CCA766 /* BZBugListViewController.m */,
 				E59FBBF118D44398009B354C /* BZViewController.h */,
 				E59FBBF218D44398009B354C /* BZViewController.m */,
 			);
@@ -570,10 +575,10 @@
 				6ED1CC0D195EC165007BF42B /* BZProductController.m in Sources */,
 				6ED1CC2F195EC1AC007BF42B /* BZBugInfo+Utils.m in Sources */,
 				6ED1CC31195EC1AC007BF42B /* BZProducts+Utils.m in Sources */,
-				6E1B6AB41966F1DC00CCA766 /* METransitions.m in Sources */,
+				6E1B6AB41966F1DC00CCA766 /* BZTransitions.m in Sources */,
 				6E1B6AB71966F1DC00CCA766 /* MEFoldAnimationController.m in Sources */,
 				6ED1CC30195EC1AC007BF42B /* BZBugs+Utils.m in Sources */,
-				6E1B6AB51966F1DC00CCA766 /* METransitionsViewController.m in Sources */,
+				6E1B6AB51966F1DC00CCA766 /* BZBugListViewController.m in Sources */,
 				6ED1CC33195EC1AC007BF42B /* BZUserInfo+Utils.m in Sources */,
 				6E1B6AB81966F1DC00CCA766 /* MEZoomAnimationController.m in Sources */,
 				F147040418D70D870027F848 /* BZUserInfo.m in Sources */,
@@ -583,8 +588,9 @@
 				F1AAFDA619015676000AADB1 /* BZBugInfo.m in Sources */,
 				E5831C4C18C5327D00D5272B /* NSDate+Formatter.m in Sources */,
 				6ED1CC20195EC165007BF42B /* BZWebServiceClient.m in Sources */,
-				6E1B6AB31966F1DC00CCA766 /* MESettingsViewController.m in Sources */,
-				6E1B6AB21966F1DC00CCA766 /* MEMenuViewController.m in Sources */,
+				6E1B6AB31966F1DC00CCA766 /* BZAccountController.m in Sources */,
+				6E1B6AB21966F1DC00CCA766 /* BZLeftMenuController.m in Sources */,
+				6E1B6AC2196836D000CCA766 /* BZBugDetailsViewController.m in Sources */,
 				E5831C4D18C5327D00D5272B /* NSString+Email.m in Sources */,
 				F1C3050018CF4CF8001BFC50 /* BZModel.xcdatamodeld in Sources */,
 				F14703F518D6ADE20027F848 /* NSManagedObject+Utils.m in Sources */,

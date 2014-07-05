@@ -1,4 +1,4 @@
-// METransitions.h
+// METransitionsViewController.h
 // TransitionFun
 //
 // Copyright (c) 2013, Michael Enriquez (http://enriquez.me)
@@ -21,25 +21,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
-#import "MEFoldAnimationController.h"
-#import "MEZoomAnimationController.h"
-#import "MEDynamicTransition.h"
 
-FOUNDATION_EXPORT NSString *const METransitionNameDefault;
-FOUNDATION_EXPORT NSString *const METransitionNameFold;
-FOUNDATION_EXPORT NSString *const METransitionNameZoom;
-FOUNDATION_EXPORT NSString *const METransitionNameDynamic;
-
-@interface METransitions : NSObject {
-    NSArray *_all;
-    NSDictionary* _selectedTransition;
-    
-}
-@property (nonatomic, strong) MEFoldAnimationController *foldAnimationController;
-@property (nonatomic, strong) MEZoomAnimationController *zoomAnimationController;
-@property (nonatomic, strong) MEDynamicTransition *dynamicTransition;
-@property (nonatomic, strong, readonly) NSArray *all;
-@property (nonatomic, strong, readonly) NSDictionary* selectedTransition;
+@interface BZBugListViewController : UITableViewController <ECSlidingViewControllerDelegate>
+- (IBAction)menuButtonTapped:(id)sender;
 @end

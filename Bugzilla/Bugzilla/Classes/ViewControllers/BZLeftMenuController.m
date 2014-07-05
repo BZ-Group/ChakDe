@@ -21,26 +21,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MEMenuViewController.h"
+#import "BZLeftMenuController.h"
 #import "UIViewController+ECSlidingViewController.h"
 
 
 typedef NS_ENUM(NSInteger, BZMenuItemLsit) {
-    Logout =2,
-    Account=0,
-    Settings = 1,
+    Logout =4,
+    Bugs=0,
+    Account = 1,
+    Reports = 2,
+    HeatMap = 3,
 };
 
 NSString *const BZMenuItemLogout = @"Logout";
-NSString *const BZMenuItemAccount= @"Account";
-NSString *const BZMenuItemSettings = @"Settings";
+NSString *const BZMenuItemBugs= @"Bugs";
+NSString *const BZMenuItemMyAccount = @"My Account";
+NSString *const BZMenuItemReports= @"Reports";
+NSString *const BZMenuItemHeatMap = @"HeatMap";
 
-@interface MEMenuViewController ()
+@interface BZLeftMenuController ()
 @property (nonatomic, strong) NSArray *menuItems;
 @property (nonatomic, strong) UINavigationController *transitionsNavigationController;
 @end
 
-@implementation MEMenuViewController
+@implementation BZLeftMenuController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,8 +66,8 @@ NSString *const BZMenuItemSettings = @"Settings";
 - (NSArray *)menuItems {
     if (_menuItems) return _menuItems;
     
-    _menuItems = @[BZMenuItemAccount, BZMenuItemSettings, BZMenuItemLogout];
-    
+    _menuItems = @[BZMenuItemBugs, BZMenuItemMyAccount,BZMenuItemReports,BZMenuItemHeatMap,BZMenuItemLogout];
+
     return _menuItems;
 }
 
@@ -99,13 +103,17 @@ NSString *const BZMenuItemSettings = @"Settings";
         case Logout:
             [self.slidingViewController dismissViewControllerAnimated:YES completion:NULL];
             break;
-        case Account:
+        case Bugs:
             self.slidingViewController.topViewController = self.transitionsNavigationController;
             break;
-        case Settings:
+        case Account:
             self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
             break;
-        default:
+        case Reports:
+            self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
+            break;
+        case HeatMap:
+            self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
             break;
     }
         

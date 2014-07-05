@@ -1,4 +1,4 @@
-// MEMenuViewController.h
+// MESettingsViewController.h
 // TransitionFun
 //
 // Copyright (c) 2013, Michael Enriquez (http://enriquez.me)
@@ -23,10 +23,6 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT NSString *const BZMenuItemLogout;
-FOUNDATION_EXPORT NSString *const BZMenuItemAccount;
-FOUNDATION_EXPORT NSString *const BZMenuItemSettings;
-
-@interface MEMenuViewController : UIViewController <UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface BZAccountController : UITableViewController
+- (IBAction)menuButtonTapped:(id)sender;
 @end

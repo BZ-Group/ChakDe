@@ -28,7 +28,7 @@
             predicateBugs   = [NSPredicate predicateWithFormat:@"bug_id = %@",bug[@"id"]];
         }
         
-        bugs =     (BZBugs*)[NSManagedObject getManagedObjectContextForEntity:@"BZBugs" withPredicate:predicateBugs];
+        bugs =     (BZBugs*)[NSManagedObject getManagedObjectForEntity:@"BZBugs" withPredicate:predicateBugs];
         [bugs setPriority:bug[@"priority"]];
         [bugs setProduct:bug[@"product"]];
         [bugs setSummary:bug[@"summary"]];
@@ -50,6 +50,9 @@
 
 +(NSArray *) getBugs:(NSManagedObjectContext*) managedObjectContext forUser:(NSString*)userID{
     
-    return nil;
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"hasUser==%@", appDelegate.currentUser];
+    NSArray *bugs = [NSManagedObject getManagedObjectArrayForEntity:@"BZBugs" withPredicate:predicate];
+
+    return bugs;
 }
 @end

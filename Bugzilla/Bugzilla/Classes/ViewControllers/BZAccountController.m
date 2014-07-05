@@ -21,15 +21,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "MESettingsViewController.h"
+#import "BZAccountController.h"
 #import "MEDynamicTransition.h"
 #import "UIViewController+ECSlidingViewController.h"
 
-@interface MESettingsViewController ()
+@interface BZAccountController ()
 @property (nonatomic, strong) UIPanGestureRecognizer *dynamicTransitionPanGesture;
 @end
 
-@implementation MESettingsViewController
+@implementation BZAccountController
 
 #pragma mark - UIViewController
 

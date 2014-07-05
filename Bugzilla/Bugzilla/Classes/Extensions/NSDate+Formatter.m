@@ -9,7 +9,6 @@
 #import "NSDate+Formatter.h"
 
 
-
 @implementation NSDate (Formatter)
 
 + (NSDateFormatter *)dateFormatterWithString:(NSString *)string

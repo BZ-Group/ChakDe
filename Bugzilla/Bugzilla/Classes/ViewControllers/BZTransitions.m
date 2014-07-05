@@ -21,17 +21,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "METransitions.h"
+#import "BZTransitions.h"
 
 NSString * const METransitionNameDefault = @"Default";
 NSString * const METransitionNameFold    = @"Fold";
 NSString * const METransitionNameZoom    = @"Zoom";
 NSString * const METransitionNameDynamic = @"UIKit Dynamics";
 
-@interface METransitions ()
+@interface BZTransitions ()
 @end
 
-@implementation METransitions
+@implementation BZTransitions
 
 #pragma mark - Public
 

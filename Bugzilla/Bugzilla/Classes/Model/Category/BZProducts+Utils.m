@@ -30,7 +30,7 @@
             predicateProduct   = [NSPredicate predicateWithFormat:@"product_id = %@",productDict[@"id"]];
         }
 
-        products =     (BZProducts*)[NSManagedObject getManagedObjectContextForEntity:@"BZProducts" withPredicate:predicateProduct];
+        products =     (BZProducts*)[NSManagedObject getManagedObjectForEntity:@"BZProducts" withPredicate:predicateProduct];
         
         if([keyName isEqualToString:@"products"]){
             NSArray *componentArr = [productDict count]?[productDict valueForKey:@"components"] :nil;
@@ -44,7 +44,7 @@
             for (NSDictionary* compData in componentArr) {
                 
                 NSPredicate * predicateComponent = [NSPredicate predicateWithFormat:@"comp_id = %@",compData[@"id"]];
-                components =     (BZComponents*)[NSManagedObject getManagedObjectContextForEntity:@"BZComponents" withPredicate:predicateComponent];
+                components =     (BZComponents*)[NSManagedObject getManagedObjectForEntity:@"BZComponents" withPredicate:predicateComponent];
                 [components setComp_default_assigned_to:compData[@"default_assigned_to"]];
                 [components setComp_description:compData[@"description"]];
                 [components setComp_id:compData[@"id"]];
