@@ -23,9 +23,12 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT NSString *const BZMenuItemLogout;
-FOUNDATION_EXPORT NSString *const BZMenuItemBugs;
-FOUNDATION_EXPORT NSString *const BZMenuItemMyAccount;
+NSString *const BZMenuItemLogout        = @"Logout";
+NSString *const BZMenuItemBugs          = @"Bugs";
+NSString *const BZMenuItemMyAccount     = @"My Account";
+NSString *const BZMenuItemReports       = @"Reports";
+NSString *const BZMenuItemHeatMap       = @"HeatMap";
+NSString *const BZMenuItemSettings      = @"Settings";
 
 @interface BZLeftMenuController : UIViewController <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

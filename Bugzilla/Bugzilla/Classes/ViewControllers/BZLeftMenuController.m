@@ -26,18 +26,15 @@
 
 
 typedef NS_ENUM(NSInteger, BZMenuItemLsit) {
-    Logout =4,
     Bugs=0,
     Account = 1,
     Reports = 2,
     HeatMap = 3,
+    Settings = 4,
+    Logout =5,
+    
 };
 
-NSString *const BZMenuItemLogout = @"Logout";
-NSString *const BZMenuItemBugs= @"Bugs";
-NSString *const BZMenuItemMyAccount = @"My Account";
-NSString *const BZMenuItemReports= @"Reports";
-NSString *const BZMenuItemHeatMap = @"HeatMap";
 
 @interface BZLeftMenuController ()
 @property (nonatomic, strong) NSArray *menuItems;
@@ -66,7 +63,7 @@ NSString *const BZMenuItemHeatMap = @"HeatMap";
 - (NSArray *)menuItems {
     if (_menuItems) return _menuItems;
     
-    _menuItems = @[BZMenuItemBugs, BZMenuItemMyAccount,BZMenuItemReports,BZMenuItemHeatMap,BZMenuItemLogout];
+    _menuItems = @[BZMenuItemBugs, BZMenuItemMyAccount,BZMenuItemReports,BZMenuItemHeatMap,BZMenuItemSettings,BZMenuItemLogout];
 
     return _menuItems;
 }
@@ -115,8 +112,11 @@ NSString *const BZMenuItemHeatMap = @"HeatMap";
         case HeatMap:
             self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
             break;
+        case Settings:
+            self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MESettingsNavigationController"];
+            break;
     }
-        
+    
     [self.slidingViewController resetTopViewAnimated:YES];
 }
 
