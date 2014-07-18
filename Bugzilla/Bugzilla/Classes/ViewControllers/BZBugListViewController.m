@@ -59,11 +59,38 @@
     self.refreshControl = refreshMe;
     self.bugsArray = [appDelegate.currentUser.hasBug array];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableView selectRowAtIndexPath:defaultIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-    });
-
+    if(![self.bugsArray count]){
+        BZBugController *bzBugController = [BZBugController sharedInstance];
+        [bzBugController getBugForAssignedTo:nil
+                                   Component:nil
+                                CreationTime:nil
+                                     Creator:nil
+                                          Id:nil  //23830 //23943
+                              LastChangeTime:@"2014-03-25 14:08:00 +0000"
+                                       Limit:nil
+                                    Priority:nil
+                                     Product:nil
+                                    Severity:nil
+                                      Status:nil
+                                     Summary:nil
+                              withCompletion:^(BOOL success, NSInteger errorCode)
+         {
+             if (success)
+             {
+                 self.bugsArray = [appDelegate.currentUser.hasBug array];
+                 NSLog(@"Success");
+             }
+             else
+             {
+                 NSLog(@"Fail");
+             }
+         }];
+    }
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSIndexPath *defaultIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//        [self.tableView selectRowAtIndexPath:defaultIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+//    });
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
